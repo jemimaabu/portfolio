@@ -1,0 +1,43 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 50px;
+  border: 1px solid var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2em;
+}
+
+header {
+  text-align: center;
+}
+
+header h2 {
+  width: 40ch;
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+

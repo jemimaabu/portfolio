@@ -1,0 +1,94 @@
+/*
+Color options:
+- grayscale
+- dark
+- pink
+*/
+:root {
+  --primary-color: #9d9496;
+  --background-color: #f4f4f4;
+  --accent-color: ;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a.link {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5;
+}
+
+.serif {
+  font-family: "Source Serif Pro", serif;
+}
+
+.sans-serif {
+  font-family: "Roboto", sans-serif;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-0 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+nav,
+footer {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
