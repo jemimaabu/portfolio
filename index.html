@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,51 +10,56 @@
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+Pro&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&family=Playfair+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Jemima Abu: Front End Developer</title>
 </head>
 
-<body class="sans-serif">
+<body>
   <main>
-    <nav class="p-4 absolute">
+    <nav class="p-4 absolute container">
       <div class="nav-logo">
-        <img src="static/images/J-light.png" alt="Jemima Abu">
+        <span class="logo serif">Jemima<br>Abu</span>
       </div>
       <div class="nav-links">
         <a href="about.html" class="link">about</a>
         <a href="works.html" class="link">work</a>
         <a href="speaking.html" class="link">speaking</a>
-        <a href="blog.html" class="link">blog</a>
+        <a href="https://blog.jemimaabu.com/" class="link">blog</a>
         <a href="contact.html" class="link">contact</a>
       </div>
     </nav>
-    <header class="p-4 h-screen flex-center">
-      <h1 class="serif">Jemima Abu</h1>
+    <header class="p-4 h-screen flex-center container">
+      <h1 class="serif">
+        Self-taught front end developer, <br>
+        School-taught systems engineer
+      </h1>
       <h2>
-        I am a front end developer, conference speaker, feminist, nerd, cat
-        lover etc.
+        I build websites with a focus on responsiveness and accessibility.
       </h2>
       <a href="about.html">Read more</a>
     </header>
-    <footer class="p-4 absolute">
+    <footer class="p-4 absolute container">
       <div class="social-media">
-        <a href="https://www.github.com/jemimaabu" title="github">
+        <a href="https://www.github.com/jemimaabu" title="Github">
           <i class="fa fa-github"></i>
         </a>
-        <a href="">
+        <a href="https://www.twitter.com/jemimaabu" title="Twitter">
           <i class="fa fa-twitter"></i>
         </a>
-        <a href="">
-          <i class="fa fa-medium"></i>
-        </a>
-        <a href="">
+        <a href="https://www.linkedin.com/in/jemimaabu" title="LinkedIn">
           <i class="fa fa-linkedin"></i>
         </a>
       </div>
-      <div class="color-changer"></div>
+      <div class="color-changer">
+        <button id="light-select" onclick="setTheme('light')">light</button> /
+        <button id="dark-select" onclick="setTheme('dark')">dark</button> /
+        <button id="pink-select" onclick="setTheme('pink')">pink</button>
+      </div>
     </footer>
   </main>
 </body>
+
+<script src="index.js"></script>
 
 </html>
