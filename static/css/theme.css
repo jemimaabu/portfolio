@@ -1,0 +1,38 @@
+:root.light {
+  --primary-color: #9d9496;
+  --background-color: #f4f4f4;
+  --text-color: #595354;
+  --accent-color: #9d949680;
+}
+
+:root.dark {
+  --primary-color: #55a9fc;
+  --background-color: #123;
+  --text-color: #f4f4f4;
+  --accent-color: #55a9fc80;
+}
+
+:root.pink {
+  --primary-color: #d57db5;
+  --background-color: #fff7fb;
+  --text-color: #ab1d78;
+  --accent-color: #d57db580;
+}
+
+.light img:not([class^="light-"]) {
+  opacity: 0;
+}
+
+.dark img:not([class^="dark-"]) {
+  opacity: 0;
+}
+
+.pink img:not([class^="pink-"]) {
+  opacity: 0;
+}
+
+.light #light-select:before,
+.dark #dark-select:before,
+.pink #pink-select:before {
+  max-width: 4rem;
+}

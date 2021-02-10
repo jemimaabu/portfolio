@@ -10,18 +10,17 @@
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&family=Playfair+Display&family=Prata&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Jemima Abu: Front End Developer</title>
 </head>
 
 <body>
   <main>
-    <nav class="p-4 absolute container">
-      <div class="nav-logo">
-        <span class="logo serif">Jemima<br>Abu</span>
-      </div>
-      <div class="nav-links">
+    <nav class="container">
+      <div class="nav-links py-8">
         <a href="about.html" class="link">about</a>
         <a href="works.html" class="link">work</a>
         <a href="speaking.html" class="link">speaking</a>
@@ -29,7 +28,10 @@
         <a href="contact.html" class="link">contact</a>
       </div>
     </nav>
-    <header class="p-4 h-screen flex-center container">
+    <header class="h-screen container flex-end">
+      <div class="logo-container pt-8 pb-4">
+        <span class="logo serif">Jemima Abu</span>
+      </div>
       <h1 class="serif">
         Self-taught front end developer, <br>
         School-taught systems engineer
@@ -39,7 +41,10 @@
       </h2>
       <a href="about.html">Read more</a>
     </header>
-    <footer class="p-4 absolute container">
+    <section id="about" class="h-screen container">
+
+    </section>
+    <footer class="container py-8">
       <div class="social-media">
         <a href="https://www.github.com/jemimaabu" title="Github">
           <i class="fa fa-github"></i>
@@ -52,9 +57,9 @@
         </a>
       </div>
       <div class="color-changer">
-        <button id="light-select" onclick="setTheme('light')">light</button> /
-        <button id="dark-select" onclick="setTheme('dark')">dark</button> /
-        <button id="pink-select" onclick="setTheme('pink')">pink</button>
+        <button class="color-select" id="light-select" onclick="setTheme('light')">light</button> /
+        <button class="color-select" id="dark-select" onclick="setTheme('dark')">dark</button> /
+        <button class="color-select" id="pink-select" onclick="setTheme('pink')">pink</button>
       </div>
     </footer>
   </main>
