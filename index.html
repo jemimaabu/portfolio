@@ -11,60 +11,72 @@
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&family=Playfair+Display&family=Prata&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&family=Playfair+Display&family=Inter&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Jemima Abu: Front End Developer</title>
 </head>
 
 <body>
+  <header>
+    <div class="fixed-header h-screen animate-background">
+      <div class="container flex-end h-full">
+        <div class="logo-container">
+          <span class="logo animate-logo">Jemima Abu</span>
+        </div>
+        <div class="header-text">
+          <h1 class="serif">
+            <p class="animate-text-1">Self-taught front end developer,</p>
+            <p class="animate-text-2">School-taught systems engineer</p>
+          </h1>
+        </div>
+        <h2 class="animate-subtitle">
+          I build websites with a focus on responsiveness and accessibility.
+        </h2>
+        <div class="scroll-button animate-scroll" tabindex="0">
+          <div class="arrow">↓</div> scroll
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="container">
+    <a class="nav-logo serif">
+      Jemima Abu
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="link">about</a>
+      <a href="works.html" class="link">work</a>
+      <a href="speaking.html" class="link">speaking</a>
+      <a href="https://blog.jemimaabu.com/" class="link">blog</a>
+      <a href="contact.html" class="link">contact</a>
+    </div>
+  </nav>
   <main>
-    <nav class="container">
-      <div class="nav-links py-8">
-        <a href="about.html" class="link">about</a>
-        <a href="works.html" class="link">work</a>
-        <a href="speaking.html" class="link">speaking</a>
-        <a href="https://blog.jemimaabu.com/" class="link">blog</a>
-        <a href="contact.html" class="link">contact</a>
-      </div>
-    </nav>
-    <header class="h-screen container flex-end">
-      <div class="logo-container pt-8 pb-4">
-        <span class="logo serif">Jemima Abu</span>
-      </div>
-      <h1 class="serif">
-        Self-taught front end developer, <br>
-        School-taught systems engineer
-      </h1>
-      <h2>
-        I build websites with a focus on responsiveness and accessibility.
-      </h2>
-      <a href="about.html">Read more</a>
-    </header>
     <section id="about" class="h-screen container">
 
     </section>
-    <footer class="container py-8">
-      <div class="social-media">
-        <a href="https://www.github.com/jemimaabu" title="Github">
-          <i class="fa fa-github"></i>
-        </a>
-        <a href="https://www.twitter.com/jemimaabu" title="Twitter">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jemimaabu" title="LinkedIn">
-          <i class="fa fa-linkedin"></i>
-        </a>
-      </div>
-      <div class="color-changer">
-        <button class="color-select" id="light-select" onclick="setTheme('light')">light</button> /
-        <button class="color-select" id="dark-select" onclick="setTheme('dark')">dark</button> /
-        <button class="color-select" id="pink-select" onclick="setTheme('pink')">pink</button>
-      </div>
-    </footer>
   </main>
+  <footer class="container py-8">
+    <div class="social-media">
+      <a href="https://www.github.com/jemimaabu" title="Github">
+        <i class="fa fa-github"></i>
+      </a>
+      <a href="https://www.twitter.com/jemimaabu" title="Twitter">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jemimaabu" title="LinkedIn">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+    <div class="color-changer">
+      <button class="color-select" id="light-select" onclick="setTheme('light')">light</button> /
+      <button class="color-select" id="dark-select" onclick="setTheme('dark')">dark</button> /
+      <button class="color-select" id="pink-select" onclick="setTheme('pink')">pink</button>
+    </div>
+  </footer>
 </body>
 
-<script src="index.js"></script>
+<script src="./static/js/index.js"></script>
+<script src="./static/js/landing-page.js"></script>
 
 </html>
