@@ -40,7 +40,7 @@
     </div>
   </header>
   <nav class="container">
-    <a class="nav-logo serif">
+    <a href="index.html" class="nav-logo serif" title="Back to Homepage">
       Jemima Abu
     </a>
     <div class="nav-links">
@@ -49,6 +49,73 @@
       <a href="speaking.html" class="link">speaking</a>
       <a href="https://blog.jemimaabu.com/" class="link">blog</a>
       <a href="contact.html" class="link">contact</a>
+      <div class="nav-controls">
+        <button id="theme-display" class="control">
+          <i class="fa fa-cog" title="Theme Select"></i>
+        </button>
+      </div>
+    </div>
+    <div class="theme-container">
+      <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+        <div class="theme-label">
+          Light
+        </div>
+        <div class="theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+      <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')" onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+        <div class="theme-label">
+          Dark
+        </div>
+        <div class="theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+      <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+        <div class="theme-label">
+          Brown
+        </div>
+        <div class="light theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+      <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+        <div class="theme-label">
+          Green
+        </div>
+        <div class="light theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+      <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+        <div class="theme-label">
+          Pink
+        </div>
+        <div class="light theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
     </div>
   </nav>
   <main>
@@ -64,14 +131,12 @@
       <a href="https://www.twitter.com/jemimaabu" title="Twitter">
         <i class="fa fa-twitter"></i>
       </a>
+      <a href="https://jemimaabu.medium.com" title="Medium">
+        <i class="fa fa-medium"></i>
+      </a>
       <a href="https://www.linkedin.com/in/jemimaabu" title="LinkedIn">
         <i class="fa fa-linkedin"></i>
       </a>
-    </div>
-    <div class="color-changer">
-      <button class="color-select" id="light-select" onclick="setTheme('light')">light</button> /
-      <button class="color-select" id="dark-select" onclick="setTheme('dark')">dark</button> /
-      <button class="color-select" id="pink-select" onclick="setTheme('pink')">pink</button>
     </div>
   </footer>
 </body>

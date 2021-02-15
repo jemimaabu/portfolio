@@ -35,7 +35,8 @@ button {
   transition: color 500ms;
 }
 
-button:hover {
+button:hover,
+button:focus {
   color: var(--text-color);
 }
 
@@ -55,11 +56,13 @@ nav {
 }
 
 nav.visible {
+  position: sticky;
   animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 nav.hidden {
-  animation: fade-out-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  position: sticky;
+  animation: fade-out 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .nav-links {
@@ -67,9 +70,10 @@ nav.hidden {
   gap: 2em;
   flex: 1 0 auto;
   justify-content: flex-end;
+  align-items: center;
 }
 
-.nav-links a {
+.nav-links .link {
   position: relative;
   color: var(--text-color);
   font-size: 0.85rem;
@@ -77,7 +81,7 @@ nav.hidden {
   letter-spacing: 1px;
 }
 
-.nav-links a:before {
+.nav-links .link:before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -90,8 +94,20 @@ nav.hidden {
   transition: max-width 500ms;
 }
 
-.nav-links a:hover:before {
+.nav-links .link:hover:before {
   max-width: 5rem;
+}
+
+.nav-controls .control {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.nav-controls .control:hover,
+.nav-controls .control:focus {
+  outline: none;
+  animation: rotate-center 2s ease-in-out both infinite;
 }
 
 .nav-logo {
@@ -188,11 +204,46 @@ header h1 p {
   animation: bounce-top 1.5s ease-in-out infinite both;
 }
 
-.color-select {
+.theme-container {
+  position: absolute;
+  padding: 2rem;
+  right: 0;
+  top: 4.5rem;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--shade-100);
+  width: fit-content;
+  transition: background-color 500ms;
+  opacity: 0;
+  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
+  border-radius: 0.25em;
+}
+
+.theme-container.visible {  
+  animation: fade-in-top 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.theme-container .theme-select  {
+  text-align: left;
+  padding: 0;
+}
+
+.theme-container .theme-select + .theme-select {
+  margin-top: 1em;
+}
+
+.theme-select .theme-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 0.25em;
+  margin-bottom: 0.5em;
+  display: inline-block;
   position: relative;
 }
 
-.color-select:before {
+.theme-select .theme-label:before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -203,6 +254,37 @@ header h1 p {
   height: 50%;
   max-width: 0;
   transition: max-width 500ms;
+}
+
+.theme-select.active .theme-label:before {
+  max-width: 5rem;
+}
+
+.theme-select .theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  padding: 1rem;
+  background-color: var(--grey-color);
+  border-radius: 0.25em;
+  transition: filter 500ms, background-color 500ms;
+}
+
+.theme-select:focus {
+  outline: none;
+}
+
+.theme-select:hover .theme,
+.theme-select:focus .theme {
+  filter: brightness(1.1);
+}
+
+.theme-select .theme .color {
+  height: 1rem;
+  width: 1rem;
+  border-radius: .2rem;
+  flex: 1 0 1rem;
 }
 
 footer {
