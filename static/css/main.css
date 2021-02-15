@@ -98,6 +98,49 @@ nav.hidden {
   max-width: 5rem;
 }
 
+.nav-controls {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-controls .hamburger {
+  width: 1.5rem;
+  height: 0.75rem;
+  position: relative;
+}
+
+.nav-controls .hamburger:before,
+.nav-controls .hamburger:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: var(--shade-500);
+  left: 0;
+  margin: auto;
+  transition: transform 500ms;
+}
+
+.nav-controls .hamburger:before {
+  top: 0;
+}
+
+.nav-controls .hamburger:after {
+  bottom: 0;
+}
+
+.nav-controls .hamburger.active:before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+.nav-controls .hamburger.active:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 .nav-controls .control {
   display: inline-block;
   font-size: 1rem;
@@ -218,13 +261,15 @@ header h1 p {
   opacity: 0;
   box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
   border-radius: 0.25em;
+  visibility: hidden;
 }
 
-.theme-container.visible {  
+.theme-container.visible {
+  visibility: visible;
   animation: fade-in-top 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-.theme-container .theme-select  {
+.theme-container .theme-select {
   text-align: left;
   padding: 0;
 }
@@ -283,7 +328,7 @@ header h1 p {
 .theme-select .theme .color {
   height: 1rem;
   width: 1rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   flex: 1 0 1rem;
 }
 
@@ -313,11 +358,39 @@ footer .social-media a {
   }
 }
 
+@media screen and (min-width: 720px) {
+  .hamburger {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 720px) {
   header h1 {
     font-size: 2rem;
   }
   header h2 {
     font-size: 1rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    padding: 2rem;
+    right: 0;
+    top: 4.5rem;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: background-color 500ms;
+    box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
+    border-radius: 0.25em;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-links.visible {
+    visibility: visible;
+    animation: fade-in-top 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 }

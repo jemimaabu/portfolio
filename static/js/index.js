@@ -2,6 +2,8 @@ const themeDisplay = document.getElementById('theme-display');
 const themeContainer = document.querySelector('.theme-container');
 const themeSelectors = document.getElementsByClassName('theme-select');
 const root = document.getElementsByTagName('html')[0];
+const menu = document.querySelector('.nav-links');
+const menuButton = document.getElementById('menu-display');
 
 const getTheme = () => {
   const theme = localStorage.getItem('theme') === null ? 'light' : localStorage.getItem('theme');
@@ -32,24 +34,14 @@ const hideThemeContainer = () => {
   })
 }
 
-const toggleThemeContainer = () => {
+themeDisplay.addEventListener("click", function () {
+  hideMenu()
   if (themeContainer.classList.contains('visible')) {
     hideThemeContainer()
   } else {
     showThemeContainer()
   }
-}
-
-themeDisplay.addEventListener("click", function () {
-  toggleThemeContainer()
 })
-
-const setThemeKey = (e, className) => {
-  if (key === "Enter" || e.which === 13) {
-    setTheme(className)
-  }
-  return;
-}
 
 const setTheme = (className) => {
   var root = document.getElementsByTagName('html')[0];
@@ -58,6 +50,25 @@ const setTheme = (className) => {
   setActiveSelector(className);
   localStorage.setItem('theme', className)
 }
+
+const showMenu = () => {
+  menu.classList.add('visible');
+  menuButton.classList.add('active');
+}
+
+const hideMenu = () => {
+  menu.classList.remove('visible');
+  menuButton.classList.remove('active');
+}
+
+menuButton.addEventListener("click", function () {
+  hideThemeContainer();
+  if (menu.classList.contains('visible')) {
+    hideMenu();
+  } else {
+    showMenu()
+  }
+})
 
 window.addEventListener('load', () => {
   getTheme();
