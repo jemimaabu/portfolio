@@ -335,6 +335,8 @@ header h1 p {
 footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 footer .social-media {
@@ -344,6 +346,11 @@ footer .social-media {
 
 footer .social-media a {
   font-size: 1.1rem;
+}
+
+footer .copyright {
+  font-size: 0.9rem;
+  color: var(--shade-500)
 }
 
 @media screen and (max-width: 960px) {
