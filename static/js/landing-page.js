@@ -23,6 +23,12 @@ const handleVisibleNav = () => {
   }
 }
 
+const handleVisibleMain = () => {
+  if (window.scrollY >= topOfMain) {
+    mainSection.classList.add('visible');
+  }
+}
+
 scrollButton.addEventListener("click", function () {
   window.scroll({ top: topOfMain, behavior: "smooth" });
 })
@@ -30,4 +36,5 @@ scrollButton.addEventListener("click", function () {
 window.addEventListener("scroll", () => {
   handleHeaderScroll()
   handleVisibleNav()
+  handleVisibleMain()
 });

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Jemima Abu is a self-taught Front End Developer and school-taught Systems Engineer from Lagos, Nigeria.">
+  <link rel="stylesheet" href="static/css/main.css" />
+  <link rel="stylesheet" href="static/css/page.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Jemima Abu: About Me</title>
+</head>
+
+<body>
+  <nav class="container">
+    <a href="index.html" class="nav-logo" title="Back to Homepage">
+      Jemima Abu
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="link">about</a>
+      <a href="works.html" class="link">work</a>
+      <a href="speaking.html" class="link">speaking</a>
+      <a href="https://blog.jemimaabu.com/" class="link">blog</a>
+      <a href="contact.html" class="link">contact</a>
+    </div>
+    <div class="nav-controls">
+      <button id="menu-display" class="hamburger">
+
+      </button>
+      <button id="theme-display" class="control">
+        <i class="fa fa-cog" title="Theme Select"></i>
+      </button>
+    </div>
+    <div class="theme-container">
+      <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+        <div class="theme-label">
+          Light
+        </div>
+        <div class="theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+      <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
+        onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+        <div class="theme-label">
+          Dark
+        </div>
+        <div class="theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+      <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+        <div class="theme-label">
+          Brown
+        </div>
+        <div class="light theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+      <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+        <div class="theme-label">
+          Green
+        </div>
+        <div class="light theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+      <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+        <div class="theme-label">
+          Pink
+        </div>
+        <div class="light theme">
+          <div class="color background"></div>
+          <div class="color shade-100"></div>
+          <div class="color shade-300"></div>
+          <div class="color shade-500"></div>
+          <div class="color text"></div>
+        </div>
+      </button>
+    </div>
+  </nav>
+  <main>
+    <section id="listening-to" class="h-screen container">
+      <div class="section-title-container">
+        <h2 class="section-title underline">What I'm Listening To</h2>
+      </div>
+      <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E370rGUyFnG71" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </section>
+  </main>
+  <footer class="container py-8">
+    <div class="social-media">
+      <a href="https://www.github.com/jemimaabu" title="Github">
+        <i class="fa fa-github"></i>
+      </a>
+      <a href="https://www.twitter.com/jemimaabu" title="Twitter">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://jemimaabu.medium.com" title="Medium">
+        <i class="fa fa-medium"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jemimaabu" title="LinkedIn">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+    <div class="copyright">
+      designed & built by Jemima Abu &hearts;
+    </div>
+  </footer>
+</body>
+
+<script src="./static/js/index.js"></script>
+
+</html>

@@ -1,0 +1,9 @@
+nav {
+  animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  z-index: 50;
+}
+
+main {
+  padding-top: 8rem;
+  animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}

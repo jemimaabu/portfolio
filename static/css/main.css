@@ -56,6 +56,7 @@ nav {
 }
 
 nav.visible {
+  z-index: 50;
   position: sticky;
   animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
@@ -159,10 +160,6 @@ nav.hidden {
   font-size: 1.1rem;
 }
 
-.logo-container {
-  padding-bottom: 1.5rem;
-}
-
 .logo {
   text-align: center;
   font-size: 1.25rem;
@@ -177,15 +174,31 @@ header {
   height: 125vh;
 }
 
+.header-container {
+  gap: 2rem;
+}
+
 header h1 {
-  font-size: 4em;
+  font-size: 4rem;
   margin: 0;
+}
+
+header h1 p {
+  position: relative;
+  font: inherit;
+  margin: 0;
+  width: fit-content;
+  font-weight: 800;
+  text-align: left;
+  line-height: 130%;
+  letter-spacing: -0.03em;
 }
 
 header h2 {
   max-width: 65ch;
   font-weight: 100;
   color: var(--shade-500);
+  margin: 0;
 }
 
 header .fixed-header {
@@ -208,7 +221,7 @@ header .fixed-header:before {
   position: absolute;
   background-color: var(--shade-100);
   width: 100%;
-  height: 51%;
+  height: 50%;
   margin: auto;
   bottom: 0;
   left: 0;
@@ -217,13 +230,6 @@ header .fixed-header:before {
 
 header .header-text {
   position: relative;
-}
-
-header h1 p {
-  position: relative;
-  font: inherit;
-  margin: 0;
-  width: fit-content;
 }
 
 .scroll-button {
@@ -350,18 +356,18 @@ footer .social-media a {
 
 footer .copyright {
   font-size: 0.9rem;
-  color: var(--shade-500)
+  color: var(--shade-500);
 }
 
 @media screen and (max-width: 960px) {
+  header .fixed-header:before {
+    height: 51%;
+  }
   header h1 {
     font-size: 3rem;
   }
   header h2 {
-    font-size: 1.25rem;
-  }
-  header #typed-text p.typing:before {
-    display: none;
+    font-size: 1.5rem;
   }
 }
 
@@ -373,9 +379,14 @@ footer .copyright {
 
 @media screen and (max-width: 720px) {
   header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
+
   header h2 {
+    font-size: 1.25rem;
+  }
+
+  .logo {
     font-size: 1rem;
   }
 
@@ -397,6 +408,8 @@ footer .copyright {
   }
 
   .nav-links.visible {
+    z-index: 50;
+    background-color: var(--background-color);
     visibility: visible;
     animation: fade-in-top 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }

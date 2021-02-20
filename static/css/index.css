@@ -1,0 +1,46 @@
+main {
+  opacity: 0;
+}
+
+main.visible {
+  animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+main.hidden {
+  animation: fade-out 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.section-title-container {
+  position: sticky;
+  top: 6rem;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.project-scroll {
+  position: sticky;
+  top: 7rem;
+}
+
+.featured-project {
+  height: 80vh;
+  display: flex;
+  width: 100%;
+}
+
+.project-content {
+  flex: 1 0 60%;
+}
+
+.project-image {
+  flex: 1 0 40%;
+}
+
+.project-image svg {
+  width: 100%;
+  fill: var(--shade-300);
+}

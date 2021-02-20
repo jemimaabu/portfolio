@@ -49,18 +49,6 @@
   --grey-color: #c8d1c7;
 }
 
-.light img:not([class^="light-"]) {
-  opacity: 0;
-}
-
-.dark img:not([class^="dark-"]) {
-  opacity: 0;
-}
-
-.pink img:not([class^="pink-"]) {
-  opacity: 0;
-}
-
 #light-select .color.text {
   background-color: #000;
 }
