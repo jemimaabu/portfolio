@@ -9,7 +9,6 @@ body {
   background-position: left top;
   color: var(--text-color);
   font-family: "Inter", sans-serif;
-  transition: background-color 500ms, color 500ms;
 }
 
 body.no-scroll {
@@ -32,7 +31,6 @@ button {
   font-size: 0.9rem;
   color: var(--shade-500);
   cursor: pointer;
-  transition: color 500ms;
 }
 
 button:hover,
@@ -42,7 +40,7 @@ button:focus {
 
 nav {
   display: flex;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -51,15 +49,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-color);
-  transition: background-color 500ms;
+  transition: top 500ms;
   opacity: 0;
 }
 
 nav.visible {
   z-index: 50;
-  position: sticky;
   animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  transition: top 500ms;
 }
 
 nav.visible.scroll-up {
@@ -71,7 +67,6 @@ nav.visible.scroll-down {
 }
 
 nav.hidden {
-  position: sticky;
   animation: fade-out 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -234,7 +229,6 @@ header .fixed-header:before {
   margin: auto;
   bottom: 0;
   left: 0;
-  transition: background-color 500ms;
 }
 
 header .header-text {
@@ -272,7 +266,6 @@ header .header-text {
   flex-direction: column;
   background-color: var(--shade-100);
   width: fit-content;
-  transition: background-color 500ms;
   opacity: 0;
   box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
   border-radius: 0.25em;
@@ -328,7 +321,7 @@ header .header-text {
   padding: 1rem;
   background-color: var(--grey-color);
   border-radius: 0.25em;
-  transition: filter 500ms, background-color 500ms;
+  transition: filter 500ms;
 }
 
 .theme-select:focus {
@@ -380,7 +373,7 @@ footer .copyright {
   }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 721px) {
   .hamburger {
     display: none;
   }
@@ -409,7 +402,6 @@ footer .copyright {
     display: flex;
     flex-direction: column;
     width: 100%;
-    transition: background-color 500ms;
     box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
     border-radius: 0.25em;
     opacity: 0;

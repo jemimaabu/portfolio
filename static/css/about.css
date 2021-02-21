@@ -1,0 +1,135 @@
+main {
+  margin-top: 4rem;
+  animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+section a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--grey-color);
+}
+
+section p {
+  color: var(--grey-text);
+  font-size: 1.25rem;
+  line-height: 140%;
+}
+
+#about.container {
+  max-width: 960px;
+}
+
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.intro-image {
+  flex: 1 1 200px;
+}
+
+.intro-image img {
+  width: 100%;
+  background-color: var(--grey-color);
+}
+
+.intro {
+  flex: 1 1 60%;
+}
+
+.intro p {
+  max-width: 40ch;
+}
+
+.intro .large-text {
+  margin-top: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--shade-500);
+}
+
+.intro .bold-text {
+  font-size: 1.5rem;
+  color: var(--grey-text);
+}
+
+#up-to {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.listening-section .af {
+  background-color: var(--shade-300);
+}
+
+.gr_custom_container_1613915968 {
+  color: var(--text-color);
+  min-width: 300px;
+  flex: 1 1 50%;
+}
+
+.gr_custom_header_1613915968 a {
+  padding: 0 0.25rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  width: 100%;
+  position: relative;
+}
+
+.gr_custom_header_1613915968 a::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.gr_custom_each_container_1613915968 {
+  width: 100%;
+  clear: both;
+  overflow: auto;
+}
+
+.gr_custom_book_container_1613915968 {
+  overflow: hidden;
+  height: 80px;
+  float: left;
+  margin-right: 0.25rem;
+  width: auto;
+}
+
+.gr_custom_book_container_1613915968 img {
+  height: 100%;
+}
+
+.gr_custom_author_1613915968 {
+  font-size: inherit;
+}
+
+.gr_custom_tags_1613915968 {
+  font-size: 10px;
+  color: gray;
+}
+
+.gr_custom_rating_1613915968 {
+  float: right;
+}
+
+.gr_custom_container_1613915968 center {
+  display: none;
+}
+
+
+@media screen and (max-width: 720px) {
+  .intro-container {
+    flex-direction: column-reverse;
+  }
+}

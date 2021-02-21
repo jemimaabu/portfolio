@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
   <meta name="description"
     content="Jemima Abu is a self-taught Front End Developer and school-taught Systems Engineer from Lagos, Nigeria.">
   <link rel="stylesheet" href="static/css/main.css" />
-  <link rel="stylesheet" href="static/css/page.css" />
+  <link rel="stylesheet" href="static/css/about.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
@@ -104,12 +104,15 @@
   </nav>
   <main>
     <section id="about" class="container">
+      <section id="intro">
+
+      </section>
       <div class="intro-container">
         <div class="intro-image">
           <img src="./static/images/about/portrait.png" alt="Jemima Abu">
         </div>
         <div class="intro">
-          <p class="large-text">Hello, I'm Jemima Abu :)</p>
+          <p class="large-text">Hello, I'm Jemima Abu &#128578;</p>
           <p class="bold-text"> I’m a self-taught Front End Developer and school-taught
             Systems Engineer from Nigeria, currently based in Lithuania.
             I build websites with a focus on responsiveness, accessibility and pleasing aesthetics.</p>
@@ -117,10 +120,6 @@
       </div>
       <div class="main-text">
         <div class="text">
-          <p>
-            I’ve always been interested in engineering since I could remember, mostly because math was my favourite
-            subject and I was very good at it.
-          </p>
           <p>
             I first started coding sometime in 2017 after taking a C# course in my 2nd year of university. The very
             first thing I built was a command-line GPA calculator (<a
@@ -130,34 +129,45 @@
           </p>
           <p>
             I knew I enjoyed figuring out the logic behind creating applications but I was more interested in learning
-            how to make it look pretty to users, that’s how I got introduced to frontend development and I haven’t
-            looked back since.
+            how to make it look pretty to users. That's how I started my <a
+              href="https://linkedin.com/in/jemimaabu">career</a> in front end development.
           </p>
           <p>
-            I’m constantly trying to learn new technologies and concepts and I try to share my knowledge by <a href="https://jemimaabu.medium.com/">writing
+            I’m constantly trying to learn new technologies and concepts and I try to share my knowledge by <a
+              href="https://jemimaabu.medium.com/">writing
               articles</a> and <a href="speaking.html">speaking</a> at conferences.
           </p>
           <p>
-            I enjoy building fun designs on <a href="https://codepen.io/Jemimaabu" target="_blank">Codepen</a> and time-saving projects on <a href="https://github.com/jemimaabu" target="_blank">Github</a>. I also publish beginner-friendly
-            articles on <a href="https://hashnode.com/@jemimaabu">Hashnode</a> and <a href="https://www.freecodecamp.org/news/author/jemima/">freeCodeCamp</a>.</p>
+            I enjoy building fun designs on <a href="https://codepen.io/Jemimaabu" target="_blank">Codepen</a> and
+            time-saving projects on <a href="https://github.com/jemimaabu" target="_blank">Github</a>. I also publish
+            beginner-friendly
+            articles on <a href="https://hashnode.com/@jemimaabu">Hashnode</a> and <a
+              href="https://www.freecodecamp.org/news/author/jemima/">freeCodeCamp</a>.</p>
           <p>
             I’m very dedicated to diversity and inclusion in the tech space so I try to support initiatives targeted
             towards minorities and provide direct mentorship to people who look like me.
           </p>
           <p>
-            Currently, I’m focused on moving to the next stage of my career and achieving mid-level developer status. 
+            Currently, I’m focused on moving to the next stage of my career and achieving mid-level developer status.
           </p>
           <p>
             Thanks for reading &#128522;
           </p>
         </div>
       </div>
-      <section id="listening-to">
-        <div class="section-title-container">
-          <h2 class="section-title underline">What I'm Listening To</h2>
+      <section id="up-to">
+        <div class="listening-section">
+          <div class="section-title-container">
+            <h2 class="section-title underline">What I'm Listening To</h2>
+          </div>
+          <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E370rGUyFnG71" width="300" height="80"
+            frameborder="0" allowtransparency="true" allow="encrypted-media" style="background-color: var(--shade-300)" id="spotify"></iframe>
         </div>
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E370rGUyFnG71" width="300" height="380"
-          frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <div class="reading-section">
+          <script
+            src="https://www.goodreads.com/review/custom_widget/57377663.What%20I'm%20Reading?cover_position=left&cover_size=small&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=1&widget_id=1613915968&widget_text_color=000000&widget_title_size=medium&widget_width=medium"
+            type="text/javascript" charset="utf-8"></script>
+        </div>
       </section>
     </section>
   </main>
@@ -183,5 +193,6 @@
 </body>
 
 <script src="./static/js/index.js"></script>
+<script src="./static/js/about.js"></script>
 
 </html>
