@@ -59,6 +59,15 @@ nav.visible {
   z-index: 50;
   position: sticky;
   animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  transition: top 500ms;
+}
+
+nav.visible.scroll-up {
+  top: 0;
+}
+
+nav.visible.scroll-down {
+  top: -20%;
 }
 
 nav.hidden {

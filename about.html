@@ -12,15 +12,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Jemima Abu: About Me</title>
 </head>
 
 <body>
-  <nav class="container">
+  <nav class="container visible">
     <a href="index.html" class="nav-logo" title="Back to Homepage">
       Jemima Abu
     </a>
@@ -104,11 +103,62 @@
     </div>
   </nav>
   <main>
-    <section id="listening-to" class="h-screen container">
-      <div class="section-title-container">
-        <h2 class="section-title underline">What I'm Listening To</h2>
+    <section id="about" class="container">
+      <div class="intro-container">
+        <div class="intro-image">
+          <img src="./static/images/about/portrait.png" alt="Jemima Abu">
+        </div>
+        <div class="intro">
+          <p class="large-text">Hello, I'm Jemima Abu :)</p>
+          <p class="bold-text"> I’m a self-taught Front End Developer and school-taught
+            Systems Engineer from Nigeria, currently based in Lithuania.
+            I build websites with a focus on responsiveness, accessibility and pleasing aesthetics.</p>
+        </div>
       </div>
-      <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E370rGUyFnG71" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <div class="main-text">
+        <div class="text">
+          <p>
+            I’ve always been interested in engineering since I could remember, mostly because math was my favourite
+            subject and I was very good at it.
+          </p>
+          <p>
+            I first started coding sometime in 2017 after taking a C# course in my 2nd year of university. The very
+            first thing I built was a command-line GPA calculator (<a
+              href="https://github.com/jemimaabu/GPA-Calculator-C-" target="_blank">legacy code here</a> for posterity)
+            and from then, I was
+            hooked.
+          </p>
+          <p>
+            I knew I enjoyed figuring out the logic behind creating applications but I was more interested in learning
+            how to make it look pretty to users, that’s how I got introduced to frontend development and I haven’t
+            looked back since.
+          </p>
+          <p>
+            I’m constantly trying to learn new technologies and concepts and I try to share my knowledge by <a href="https://jemimaabu.medium.com/">writing
+              articles</a> and <a href="speaking.html">speaking</a> at conferences.
+          </p>
+          <p>
+            I enjoy building fun designs on <a href="https://codepen.io/Jemimaabu" target="_blank">Codepen</a> and time-saving projects on <a href="https://github.com/jemimaabu" target="_blank">Github</a>. I also publish beginner-friendly
+            articles on <a href="https://hashnode.com/@jemimaabu">Hashnode</a> and <a href="https://www.freecodecamp.org/news/author/jemima/">freeCodeCamp</a>.</p>
+          <p>
+            I’m very dedicated to diversity and inclusion in the tech space so I try to support initiatives targeted
+            towards minorities and provide direct mentorship to people who look like me.
+          </p>
+          <p>
+            Currently, I’m focused on moving to the next stage of my career and achieving mid-level developer status. 
+          </p>
+          <p>
+            Thanks for reading &#128522;
+          </p>
+        </div>
+      </div>
+      <section id="listening-to">
+        <div class="section-title-container">
+          <h2 class="section-title underline">What I'm Listening To</h2>
+        </div>
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E370rGUyFnG71" width="300" height="380"
+          frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </section>
     </section>
   </main>
   <footer class="container py-8">

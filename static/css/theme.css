@@ -1,12 +1,13 @@
 :root,
 :root.light {
-  --background-color: #fff;
+  --background-color: #fafafa;
   --text-color: #000;
   --shade-100: #efefef;
   --shade-300: #8a8a8a;
   --shade-500: #3d3d3d;
   --secondary-color: #ccd0be;
   --grey-color: #c2bfbc;
+  --grey-text: #595959;
 }
 
 :root.dark {
@@ -17,6 +18,8 @@
   --shade-500: #8cb0d9;
   --secondary-color: #7d1200;
   --grey-color: #afbecf;
+  --grey-text: #afbecf;
+  ;
 }
 
 :root.brown {
@@ -27,6 +30,7 @@
   --shade-500: #4a301c;
   --secondary-color: #baafd0;
   --grey-color: #c2bfbc;
+  --grey-text: #5e5955;
 }
 
 :root.pink {
@@ -37,6 +41,7 @@
   --shade-500: #732657;
   --secondary-color: #4cab9780;
   --grey-color: #d1c7cd;
+  --grey-text: #62505b;
 }
 
 :root.green {
@@ -47,6 +52,7 @@
   --shade-500: #012d32;
   --secondary-color: #e5b3b9;
   --grey-color: #c8d1c7;
+  --grey-text: #536250;
 }
 
 #light-select .color.text {
