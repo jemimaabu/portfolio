@@ -24,6 +24,26 @@ a {
   text-decoration: none;
 }
 
+a.link-btn {
+  display: inline-block;
+  border: 2px solid var(--grey-color);
+  background-color: transparent;
+  border-radius: 2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  transition: border 500ms, background-color 500ms, color 500ms;
+}
+
+a.link-btn:hover,
+a.link-btn:focus {
+  outline: none;
+  color: var(--background-color);
+  background-color: var(--shade-500);
+  border-color: var(--shade-500);
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -39,15 +59,12 @@ button:focus {
 }
 
 nav {
-  display: flex;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  justify-content: space-between;
-  align-items: center;
   background-color: var(--background-color);
   transition: top 500ms;
   opacity: 0;
@@ -55,7 +72,7 @@ nav {
 
 nav.visible {
   z-index: 50;
-  animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 nav.visible.scroll-up {
@@ -68,6 +85,12 @@ nav.visible.scroll-down {
 
 nav.hidden {
   animation: fade-out 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
@@ -99,7 +122,14 @@ nav.hidden {
   transition: max-width 500ms;
 }
 
-.nav-links .link:hover:before {
+.nav-links .link:hover,
+.nav-links .link:focus {
+  outline: none;
+}
+
+.nav-links .link:hover:before,
+.nav-links .link:focus:before,
+.nav-links .link.active:before {
   max-width: 5rem;
 }
 
@@ -179,6 +209,12 @@ header {
 }
 
 .header-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  align-items: start;
   gap: 2rem;
 }
 
@@ -207,6 +243,7 @@ header h2 {
 
 header .fixed-header {
   position: fixed;
+  height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
@@ -340,11 +377,21 @@ header .header-text {
   flex: 1 0 1rem;
 }
 
+.scroll-in {
+  opacity: 0;
+}
+
+.scroll-in.scrolled {
+  animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 footer .social-media {
@@ -359,6 +406,16 @@ footer .social-media a {
 footer .copyright {
   font-size: 0.9rem;
   color: var(--shade-500);
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
 }
 
 @media screen and (max-width: 960px) {
@@ -380,6 +437,10 @@ footer .copyright {
 }
 
 @media screen and (max-width: 720px) {
+  header {
+    height: 125vh;
+  }
+
   header h1 {
     font-size: 2.5rem;
   }

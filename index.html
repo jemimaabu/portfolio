@@ -12,8 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Jemima Abu: Front End Developer</title>
@@ -21,8 +20,8 @@
 
 <body>
   <header>
-    <div class="fixed-header h-screen animate-background">
-      <div class="container header-container flex-end h-full">
+    <div class="fixed-header animate-background">
+      <div class="container header-container">
         <div class="logo-container">
           <span class="logo animate-logo">Jemima Abu</span>
         </div>
@@ -41,126 +40,225 @@
       </div>
     </div>
   </header>
-  <nav class="container">
-    <a href="index.html" class="nav-logo" title="Back to Homepage">
-      Jemima Abu
-    </a>
-    <div class="nav-links">
-      <a href="about.html" class="link">about</a>
-      <a href="works.html" class="link">work</a>
-      <a href="speaking.html" class="link">speaking</a>
-      <a href="https://blog.jemimaabu.com/" class="link">blog</a>
-      <a href="contact.html" class="link">contact</a>
-    </div>
-    <div class="nav-controls">
-      <button id="menu-display" class="hamburger">
-
-      </button>
-      <button id="theme-display" class="control">
-        <i class="fa fa-cog" title="Theme Select"></i>
-      </button>
-    </div>
-    <div class="theme-container">
-      <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
-        <div class="theme-label">
-          Light
-        </div>
-        <div class="theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
-      <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
-        onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
-        <div class="theme-label">
-          Dark
-        </div>
-        <div class="theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
-      <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
-        <div class="theme-label">
-          Brown
-        </div>
-        <div class="light theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
-      <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
-        <div class="theme-label">
-          Green
-        </div>
-        <div class="light theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
-      <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
-        <div class="theme-label">
-          Pink
-        </div>
-        <div class="light theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-logo" title="Back to Homepage">
+        Jemima Abu
+      </a>
+      <div class="nav-links">
+        <a href="about.html" class="link">about</a>
+        <a href="works.html" class="link">work</a>
+        <a href="speaking.html" class="link">speaking</a>
+        <a href="https://blog.jemimaabu.com/" class="link">blog</a>
+        <a href="contact.html" class="link">contact</a>
+      </div>
+      <div class="nav-controls">
+        <button id="menu-display" class="hamburger"></button>
+        <button id="theme-display" class="control">
+          <i class="fa fa-cog" title="Theme Select"></i>
+        </button>
+      </div>
+      <div class="theme-container">
+        <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+          <div class="theme-label">
+            Light
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
+          onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+          <div class="theme-label">
+            Dark
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+          <div class="theme-label">
+            Brown
+          </div>
+          <div class="light theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+          <div class="theme-label">
+            Green
+          </div>
+          <div class="light theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Pink
+          </div>
+          <div class="light theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+      </div>
     </div>
   </nav>
   <main>
-    <section id="projects" class="h-screen container">
-      <div class="section-title-container">
-        <h2 class="section-title underline">Featured Projects</h2>
-      </div>
-      <div class="project-scroll">
-        <div class="featured-project">
-          <div class="project-content">
-            <h3 class="project-title">
-
-            </h3>
-            <div class="project-description">
-
-            </div>
-            <div class="project-links">
-
-            </div>
+    <section id="about">
+      <div class="container inner-container">
+        <div class="intro scroll-in">
+          <h2 class="section-title">Hello, I'm Jemima Abu &#128578;</h2>
+          <div class="section-subtitle">
+            <p> I’m a self-taught Front End Developer and school-taught
+              Systems Engineer from Nigeria, currently based in Lithuania.</p>
+            <p>
+              I build websites with a focus on responsiveness, accessibility and pleasing aesthetics, using a tech stack
+              of JavaScript frameworks and libraries.</p>
+            <p>I also write articles and I have my works published on Medium, Hashnode, freeCodeCamp, CSSTricks and
+              Envato Tuts.</p>
           </div>
-          <div class="project-image">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-              y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-              <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-              <g>
-                <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
-                  <path
-                    d="M943.2,3240.1c-34.6-25-82.7-69.2-103.8-98l-40.4-53.8V546.5v-2541.8h4201h4201l5.8,2470.6c3.8,1732.3,0,2499.5-15.4,2568.7c-21.2,98.1-76.9,171.1-167.3,217.3c-30.7,15.4-1119,21.2-4029.9,21.2H1006.6L943.2,3240.1z M8826.1,609.9v-2307.2H5000H1173.9V609.9v2307.2H5000h3826.1V609.9z" />
-                  <path
-                    d="M452.9-2433.7l-346.1-255.7L101-2824c-3.8-113.4,1.9-144.2,34.6-186.5l40.4-51.9h4824h4824l40.4,51.9c32.7,42.3,38.5,73.1,34.6,186.5l-5.8,134.6l-346.1,255.7L9201-2178H5000H799L452.9-2433.7z M5688.3-2768.2l-5.8-73H5000h-682.5l-5.8,73l-5.8,71.2H5000h694.1L5688.3-2768.2z" />
-                </g>
-              </g>
-            </svg>
+          <div class="section-link">
+            <a href="about.html" class="link-btn">More About Me</a>
           </div>
         </div>
       </div>
     </section>
+    <section id="projects">
+      <div class="container">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">Featured Projects &#128187;</h2>
+          <p class="section-subtitle">
+            I do most of my work under contract but I tend to freelance from time to time or build projects for fun.
+            Here are some of my most recent commercial projects:
+          </p>
+        </div>
+        <div class="project-container">
+          <div class="project scroll-in">
+            <div class="project-image">
+              <img src="./static/images/projects/trainella.png" alt="Trainella yoga website">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">
+                Trainella
+              </h3>
+              <div class="project-description">
+                This was a project I built for a client.
+              </div>
+              <div class="project-tags">
+                <div class="tag">Wordpress</div>
+                <div class="tag">CSS</div>
+                <div class="tag">HTML</div>
+              </div>
+              <div class="project-links">
+                <a href="https://trainella.com" class="project-link">Live Site</a>
+              </div>
+            </div>
+          </div>
+          <div class="project scroll-in">
+            <div class="project-image">
+              <img src="./static/images/projects/cybercamp.png" alt="UNILAG Consult Cybercamp Website">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">
+                Trainella
+              </h3>
+              <div class="project-description">
+                This was a project I built for a client.
+              </div>
+              <div class="project-tags">
+                <div class="tag">Wordpress</div>
+                <div class="tag">CSS</div>
+                <div class="tag">HTML</div>
+              </div>
+              <div class="project-links">
+                <a href="https://trainella.com" class="project-link">Live Site</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-link">
+          <a href="work.html" class="link-btn">View All Projects</a>
+        </div>
+      </div>
+    </section>
+    <section id="talks">
+      <div class="container">
+        <h2 class="section-title">Featured Talks &#127908;</h2>
+        <p class="section-subtitle">
+          I like to speak at tech conferences on a variety of topics ranging from web accessibility to career
+          development. Here are some of my most recent talks:
+        </p>
+        <div class="talks-container">
+          <div class="main-talk">
+            <div class="talk-embed">
+              <iframe src="https://www.youtube.com/embed/lFzWAsA76DU?controls=0" frameborder="0"
+                allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="talk-details">
+
+            </div>
+          </div>
+          <div class="talk-grid">
+            <div class="talk-card">
+              <div class="talk-embed">
+                <iframe src="https://www.youtube.com/embed/YGPxUK5Ksuw" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="talk-details">
+
+              </div>
+            </div>
+            <div class="talk-card">
+              <div class="talk-embed">
+                <iframe src="https://www.youtube.com/embed/11NNrrbKKgU" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="talk-details">
+
+              </div>
+            </div>
+            <div class="talk-card">
+              <div class="talk-embed">
+                <iframe src="https://www.youtube.com/embed/a0CmIEH44vg" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="talk-details">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-link">
+          <a href="speaking.html" class="link-btn">View Upcoming Talks</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="container py-8">
+  <footer class="container">
     <div class="social-media">
       <a href="https://www.github.com/jemimaabu" title="Github">
         <i class="fa fa-github"></i>

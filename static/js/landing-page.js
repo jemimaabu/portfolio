@@ -1,23 +1,37 @@
 
-const header = document.querySelector(".fixed-header");
+const header = document.querySelector("header");
+const fixedHeader = document.querySelector(".fixed-header");
 const nav = document.querySelector("nav");
 const scrollButton = document.querySelector(".scroll-button");
 const mainSection = document.querySelector("main");
 const topOfMain = mainSection.offsetTop;
+const scrollElements = document.querySelectorAll('.scroll-in');
+
+const elementInViewport = (el, offset = 0) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  if (elementTop <= (window.innerHeight || document.documentElement.clientHeight) + offset) {
+    return true;
+  } else {
+    return false
+  }
+}
 
 const handleHeaderScroll = () => {
-  if (window.scrollY >= topOfMain - window.innerHeight) {
-    header.classList.add('scrolled');
+  const headerBottomOffset = header.getBoundingClientRect().bottom;
+
+  if (headerBottomOffset <= fixedHeader.clientHeight) {
+    fixedHeader.classList.add('scrolled');
   } else {
-    header.classList.remove('scrolled');
+    fixedHeader.classList.remove('scrolled');
   }
 }
 
 const handleVisibleNav = () => {
-  if (window.scrollY >= topOfMain) {
+  if (elementInViewport(nav)) {
     nav.classList.add('visible');
     nav.classList.remove('hidden');
-  } else if (nav.classList.contains('visible') && window.scrollY <= topOfMain) {
+  } else if (nav.classList.contains('visible') && !elementInViewport(nav)) {
     nav.classList.remove('visible');
     nav.classList.add('hidden');
   }
@@ -29,6 +43,10 @@ const handleVisibleMain = () => {
   }
 }
 
+const displayScrollElement = (element) => {
+  element.classList.add('scrolled')
+}
+
 scrollButton.addEventListener("click", function () {
   window.scroll({ top: topOfMain, behavior: "smooth" });
 })
@@ -36,5 +54,11 @@ scrollButton.addEventListener("click", function () {
 window.addEventListener("scroll", () => {
   handleHeaderScroll()
   handleVisibleNav()
-  handleVisibleMain()
+  handleVisibleMain();
+
+  scrollElements.forEach((el) => {
+    if (elementInViewport(el, 300)) {
+      displayScrollElement(el);
+    }
+  })
 });

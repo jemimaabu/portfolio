@@ -2,7 +2,8 @@ const root = document.querySelector('html');
 const body = document.querySelector('body');
 const mainNav = document.querySelector("nav");
 const menu = document.querySelector('.nav-links');
-const menuButton = document.getElementById('menu-display'); const themeDisplay = document.getElementById('theme-display');
+const menuButton = document.getElementById('menu-display');
+const themeDisplay = document.getElementById('theme-display');
 const themeContainer = document.querySelector('.theme-container');
 const themeSelectors = document.getElementsByClassName('theme-select');
 
@@ -109,6 +110,4 @@ window.addEventListener('scroll', () => {
   handleNavScroll()
 })
 
-window.addEventListener('load', () => {
-  getTheme();
-})
+getTheme();
