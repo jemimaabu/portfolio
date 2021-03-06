@@ -249,11 +249,11 @@ header .animate-scroll {
 @keyframes slide-bottom {
   0% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
     -webkit-transform: translateY(10vh);
-            transform: translateY(10vh);
+    transform: translateY(10vh);
   }
 }
 
@@ -300,6 +300,15 @@ header .animate-scroll {
     opacity: 0.6;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }

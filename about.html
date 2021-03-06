@@ -19,87 +19,89 @@
 </head>
 
 <body>
-  <nav class="container visible">
-    <a href="index.html" class="nav-logo" title="Back to Homepage">
-      Jemima Abu
-    </a>
-    <div class="nav-links">
-      <a href="about.html" class="link">about</a>
-      <a href="works.html" class="link">work</a>
-      <a href="speaking.html" class="link">speaking</a>
-      <a href="https://blog.jemimaabu.com/" class="link">blog</a>
-      <a href="contact.html" class="link">contact</a>
-    </div>
-    <div class="nav-controls">
-      <button id="menu-display" class="hamburger">
+  <nav class="visible">
+    <div class="container">
+      <a href="index.html" class="nav-logo" title="Back to Homepage">
+        Jemima Abu
+      </a>
+      <div class="nav-links">
+        <a href="about.html" class="link active">about</a>
+        <a href="works.html" class="link">work</a>
+        <a href="speaking.html" class="link">speaking</a>
+        <a href="https://blog.jemimaabu.com/" class="link">blog</a>
+        <a href="contact.html" class="link">contact</a>
+      </div>
+      <div class="nav-controls">
+        <button id="menu-display" class="hamburger">
 
-      </button>
-      <button id="theme-display" class="control">
-        <i class="fa fa-cog" title="Theme Select"></i>
-      </button>
-    </div>
-    <div class="theme-container">
-      <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
-        <div class="theme-label">
-          Light
-        </div>
-        <div class="theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
-      <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
-        onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
-        <div class="theme-label">
-          Dark
-        </div>
-        <div class="theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
-      <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
-        <div class="theme-label">
-          Brown
-        </div>
-        <div class="light theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
-      <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
-        <div class="theme-label">
-          Green
-        </div>
-        <div class="light theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
-      <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
-        <div class="theme-label">
-          Pink
-        </div>
-        <div class="light theme">
-          <div class="color background"></div>
-          <div class="color shade-100"></div>
-          <div class="color shade-300"></div>
-          <div class="color shade-500"></div>
-          <div class="color text"></div>
-        </div>
-      </button>
+        </button>
+        <button id="theme-display" class="control">
+          <i class="fa fa-cog" title="Theme Select"></i>
+        </button>
+      </div>
+      <div class="theme-container">
+        <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+          <div class="theme-label">
+            Light
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
+          onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+          <div class="theme-label">
+            Dark
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+          <div class="theme-label">
+            Brown
+          </div>
+          <div class="light theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+          <div class="theme-label">
+            Green
+          </div>
+          <div class="light theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Pink
+          </div>
+          <div class="light theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+      </div>
     </div>
   </nav>
   <main>
@@ -161,7 +163,8 @@
             <h2 class="section-title underline">What I'm Listening To</h2>
           </div>
           <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E370rGUyFnG71" width="300" height="80"
-            frameborder="0" allowtransparency="true" allow="encrypted-media" style="background-color: var(--shade-300)" id="spotify"></iframe>
+            frameborder="0" allowtransparency="true" allow="encrypted-media" style="background-color: var(--shade-300)"
+            id="spotify"></iframe>
         </div>
         <div class="reading-section">
           <script
@@ -171,7 +174,7 @@
       </section>
     </section>
   </main>
-  <footer class="container py-8">
+  <footer class="container">
     <div class="social-media">
       <a href="https://www.github.com/jemimaabu" title="Github">
         <i class="fa fa-github"></i>
@@ -193,6 +196,5 @@
 </body>
 
 <script src="./static/js/index.js"></script>
-<script src="./static/js/about.js"></script>
 
 </html>

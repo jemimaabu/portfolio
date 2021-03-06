@@ -5,7 +5,7 @@
   --shade-100: #efefef;
   --shade-300: #8a8a8a;
   --shade-500: #3d3d3d;
-  --secondary-color: #ccd0be;
+  --secondary-color: #ccd0be80;
   --grey-color: #c2bfbc;
   --grey-text: #595959;
 }
@@ -16,10 +16,9 @@
   --shade-100: #0d1926;
   --shade-300: #264a73;
   --shade-500: #8cb0d9;
-  --secondary-color: #7d1200;
+  --secondary-color: #2a556f80;
   --grey-color: #afbecf;
   --grey-text: #afbecf;
-  ;
 }
 
 :root.brown {
@@ -28,7 +27,7 @@
   --shade-100: #c7a991;
   --shade-300: #6f482a;
   --shade-500: #4a301c;
-  --secondary-color: #baafd0;
+  --secondary-color: #baafd080;
   --grey-color: #c2bfbc;
   --grey-text: #5e5955;
 }
@@ -50,7 +49,7 @@
   --shade-100: #bae5b3;
   --shade-300: #024541;
   --shade-500: #012d32;
-  --secondary-color: #e5b3b9;
+  --secondary-color: #e5b3b980;
   --grey-color: #c8d1c7;
   --grey-text: #536250;
 }
@@ -62,7 +61,7 @@
   background-color: #efefef;
 }
 #light-select .color.shade-300 {
-  background-color: #8a8a8a
+  background-color: #8a8a8a;
 }
 #light-select .color.shade-500 {
   background-color: #3d3d3d;
@@ -78,7 +77,7 @@
   background-color: #0d1926;
 }
 #dark-select .color.shade-300 {
-  background-color: #264a73
+  background-color: #264a73;
 }
 #dark-select .color.shade-500 {
   background-color: #8cb0d9;
