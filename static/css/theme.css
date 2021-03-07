@@ -5,7 +5,7 @@
   --shade-100: #efefef;
   --shade-300: #8a8a8a;
   --shade-500: #3d3d3d;
-  --secondary-color: #ccd0be80;
+  --secondary-color: #ccd0be;
   --grey-color: #c2bfbc;
   --grey-text: #595959;
 }
@@ -16,9 +16,9 @@
   --shade-100: #0d1926;
   --shade-300: #264a73;
   --shade-500: #8cb0d9;
-  --secondary-color: #2a556f80;
+  --secondary-color: #2a556f;
   --grey-color: #afbecf;
-  --grey-text: #afbecf;
+  --grey-text: #cfd8e2;
 }
 
 :root.brown {
@@ -27,7 +27,7 @@
   --shade-100: #c7a991;
   --shade-300: #6f482a;
   --shade-500: #4a301c;
-  --secondary-color: #baafd080;
+  --secondary-color: #baafd0;
   --grey-color: #c2bfbc;
   --grey-text: #5e5955;
 }
@@ -38,7 +38,7 @@
   --shade-100: #d98cbd;
   --shade-300: #bf4091;
   --shade-500: #732657;
-  --secondary-color: #4cab9780;
+  --secondary-color: #a8d1c8;
   --grey-color: #d1c7cd;
   --grey-text: #62505b;
 }
@@ -49,7 +49,7 @@
   --shade-100: #bae5b3;
   --shade-300: #024541;
   --shade-500: #012d32;
-  --secondary-color: #e5b3b980;
+  --secondary-color: #e5b3b9;
   --grey-color: #c8d1c7;
   --grey-text: #536250;
 }

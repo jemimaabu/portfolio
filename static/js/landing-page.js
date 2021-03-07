@@ -3,18 +3,20 @@ const header = document.querySelector("header");
 const fixedHeader = document.querySelector(".fixed-header");
 const nav = document.querySelector("nav");
 const scrollButton = document.querySelector(".scroll-button");
-const mainSection = document.querySelector("main");
-const topOfMain = mainSection.offsetTop;
+const topOfNav = nav.getBoundingClientRect().top;
 const scrollElements = document.querySelectorAll('.scroll-in');
 
-const elementInViewport = (el, offset = 0) => {
+const elementInViewport = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
 
-  if (elementTop <= (window.innerHeight || document.documentElement.clientHeight) + offset) {
-    return true;
-  } else {
-    return false
-  }
+  return (elementTop <= ((window.innerHeight || document.documentElement.clientHeight) / dividend))
+}
+
+const elementOutofView = (el) => {
+
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (elementTop > (window.innerHeight || document.documentElement.clientHeight))
 }
 
 const handleHeaderScroll = () => {
@@ -37,28 +39,27 @@ const handleVisibleNav = () => {
   }
 }
 
-const handleVisibleMain = () => {
-  if (window.scrollY >= topOfMain) {
-    mainSection.classList.add('visible');
-  }
-}
-
 const displayScrollElement = (element) => {
   element.classList.add('scrolled')
 }
 
+const hideScrollElement = (element) => {
+  element.classList.remove('scrolled')
+}
+
 scrollButton.addEventListener("click", function () {
-  window.scroll({ top: topOfMain, behavior: "smooth" });
+  window.scroll({ top: topOfNav, behavior: "smooth" });
 })
 
 window.addEventListener("scroll", () => {
-  handleHeaderScroll()
-  handleVisibleNav()
-  handleVisibleMain();
+  handleHeaderScroll();
+  handleVisibleNav();
 
   scrollElements.forEach((el) => {
-    if (elementInViewport(el, 300)) {
+    if (elementInViewport(el, 1.25)) {
       displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el)
     }
   })
 });

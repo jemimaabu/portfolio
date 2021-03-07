@@ -1,4 +1,4 @@
-section:nth-of-type(2) {
+section:nth-of-type(even) {
   background-color: var(--secondary-color);
 }
 
@@ -25,6 +25,14 @@ section .container {
   max-width: 60ch;
 }
 
+.title-icon {
+  display: inline-block;
+}
+
+.scrolled .title-icon {
+  animation: bounce-top 1s ease-in-out both;
+}
+
 .project-container {
   display: flex;
   flex-direction: column;
@@ -42,8 +50,17 @@ section .container {
   flex-direction: row-reverse;
 }
 
-.project-image {
+.project-image,
+.project-content {
   flex: 1 1 50%;
+}
+
+.project.scrolled .project-image {
+  animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.project.scrolled:nth-of-type(even) .project-image {
+  animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .project-image img {
@@ -59,6 +76,16 @@ section .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.project-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.talks-container {
+  padding: 3rem 0;
 }
 
 .main-talk {
@@ -85,4 +112,17 @@ section .container {
 
 .talk-card iframe {
   width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+  .project,
+  .project:nth-of-type(even) {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .project.scrolled .project-image,
+  .project.scrolled:nth-of-type(even) .project-image {
+    animation: none;
+  }
 }
