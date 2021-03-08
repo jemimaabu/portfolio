@@ -6,6 +6,11 @@ const scrollButton = document.querySelector(".scroll-button");
 const topOfNav = nav.getBoundingClientRect().top;
 const scrollElements = document.querySelectorAll('.scroll-in');
 
+header.classList.add('js-fixed');
+scrollElements.forEach((el) => {
+  el.classList.add('js-opacity');
+})
+
 const elementInViewport = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
 
@@ -21,7 +26,6 @@ const elementOutofView = (el) => {
 
 const handleHeaderScroll = () => {
   const headerBottomOffset = header.getBoundingClientRect().bottom;
-
   if (headerBottomOffset <= fixedHeader.clientHeight) {
     fixedHeader.classList.add('scrolled');
   } else {

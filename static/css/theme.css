@@ -13,10 +13,10 @@
 :root.dark {
   --background-color: #0d1926;
   --text-color: #f7fafc;
-  --shade-100: #0d1926;
+  --shade-100: #1a324c;
   --shade-300: #264a73;
   --shade-500: #8cb0d9;
-  --secondary-color: #2a556f;
+  --secondary-color: #2a556f40;
   --grey-color: #afbecf;
   --grey-text: #cfd8e2;
 }
@@ -35,9 +35,9 @@
 :root.pink {
   --background-color: #fcf7f9;
   --text-color: #260d17;
-  --shade-100: #d98cbd;
-  --shade-300: #bf4091;
-  --shade-500: #732657;
+  --shade-100: #ffcce1;
+  --shade-300: #bf4075;
+  --shade-500: #732646;
   --secondary-color: #a8d1c8;
   --grey-color: #d1c7cd;
   --grey-text: #62505b;
@@ -74,7 +74,7 @@
   background-color: #f7fafc;
 }
 #dark-select .color.shade-100 {
-  background-color: #0d1926;
+  background-color: #1a324c;
 }
 #dark-select .color.shade-300 {
   background-color: #264a73;
@@ -106,16 +106,16 @@
   background-color: #260d17;
 }
 #pink-select .color.shade-100 {
-  background-color: #d98cbd;
+  background-color: #ffcce1;
 }
 #pink-select .color.shade-300 {
-  background-color: #bf4091;
+  background-color: #bf4075;
 }
 #pink-select .color.shade-500 {
-  background-color: #732657;
+  background-color: #732646;
 }
 #pink-select .color.background {
-  background-color: #fff;
+  background-color: #fcf7f9;
 }
 
 #green-select .color.text {

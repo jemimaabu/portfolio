@@ -67,23 +67,26 @@ nav {
   padding-bottom: 2rem;
   background-color: var(--background-color);
   transition: top 500ms;
+}
+
+nav.js-nav {
   opacity: 0;
 }
 
-nav.visible {
+.js-nav.visible {
   z-index: 50;
   animation: fade-in 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-nav.visible.scroll-up {
+.js-nav.visible.scroll-up {
   top: 0;
 }
 
-nav.visible.scroll-down {
+.js-nav.visible.scroll-down {
   top: -20%;
 }
 
-nav.hidden {
+.js-nav.hidden {
   animation: fade-out 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -133,21 +136,21 @@ nav .container {
   max-width: 5rem;
 }
 
-.nav-controls {
+.js-nav .nav-controls {
   padding-left: 1rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-.nav-controls .hamburger {
+.js-nav .nav-controls .hamburger {
   width: 1.5rem;
   height: 0.75rem;
   position: relative;
 }
 
-.nav-controls .hamburger:before,
-.nav-controls .hamburger:after {
+.js-nav .nav-controls .hamburger:before,
+.js-nav .nav-controls .hamburger:after {
   content: "";
   position: absolute;
   height: 2px;
@@ -176,7 +179,7 @@ nav .container {
   transform: rotate(-45deg);
 }
 
-.nav-controls .control {
+.js-nav .nav-controls .control {
   display: inline-block;
   font-size: 1rem;
   padding: 0;
@@ -200,97 +203,6 @@ nav .container {
   color: var(--shade-500);
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-
-header {
-  text-align: center;
-  position: relative;
-  height: 125vh;
-}
-
-.header-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  align-items: start;
-  gap: 2rem;
-}
-
-header h1 {
-  font-size: 4rem;
-  margin: 0;
-}
-
-header h1 p {
-  position: relative;
-  font: inherit;
-  margin: 0;
-  width: fit-content;
-  font-weight: 800;
-  text-align: left;
-  line-height: 130%;
-  letter-spacing: -0.03em;
-}
-
-header h2 {
-  max-width: 65ch;
-  font-weight: 100;
-  color: var(--shade-500);
-  margin: 0;
-}
-
-header .fixed-header {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-header .fixed-header.scrolled {
-  position: absolute;
-  bottom: 0;
-  top: auto;
-}
-
-header .fixed-header:before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  background-color: var(--shade-100);
-  width: 100%;
-  height: 50%;
-  margin: auto;
-  bottom: 0;
-  left: 0;
-}
-
-header .header-text {
-  position: relative;
-}
-
-.scroll-button {
-  position: absolute;
-  bottom: 0;
-  padding: 2rem 0;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  gap: 0.25rem;
-  transition: opacity 250ms;
-}
-
-.fixed-header.scrolled .scroll-button {
-  opacity: 0;
-}
-
-.scroll-button:hover .arrow,
-.scroll-button:focus .arrow {
-  animation: bounce-top 1.5s ease-in-out infinite both;
 }
 
 .theme-container {
@@ -377,7 +289,7 @@ header .header-text {
   flex: 1 0 1rem;
 }
 
-.scroll-in {
+.scroll-in.js-opacity {
   opacity: 0;
 }
 
@@ -422,18 +334,6 @@ footer .copyright {
   z-index: 99;
 }
 
-@media screen and (max-width: 960px) {
-  header .fixed-header:before {
-    height: 51%;
-  }
-  header h1 {
-    font-size: 3rem;
-  }
-  header h2 {
-    font-size: 1.5rem;
-  }
-}
-
 @media screen and (min-width: 721px) {
   .hamburger {
     display: none;
@@ -441,23 +341,11 @@ footer .copyright {
 }
 
 @media screen and (max-width: 720px) {
-  header {
-    height: 125vh;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  header h2 {
-    font-size: 1.25rem;
-  }
-
   .logo {
     font-size: 1rem;
   }
 
-  .nav-links {
+  .js-nav .nav-links {
     position: absolute;
     padding: 2rem;
     right: 0;
@@ -473,7 +361,7 @@ footer .copyright {
     visibility: hidden;
   }
 
-  .nav-links.visible {
+  .js-nav .nav-links.visible {
     z-index: 50;
     background-color: var(--background-color);
     visibility: visible;
