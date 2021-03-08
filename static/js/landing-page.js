@@ -1,9 +1,10 @@
 
 const header = document.querySelector("header");
 const fixedHeader = document.querySelector(".fixed-header");
+const main = document.querySelector("main");
 const nav = document.querySelector("nav");
 const scrollButton = document.querySelector(".scroll-button");
-const topOfNav = nav.getBoundingClientRect().top;
+const topOfMain = main.getBoundingClientRect().top;
 const scrollElements = document.querySelectorAll('.scroll-in');
 
 header.classList.add('js-fixed');
@@ -52,7 +53,7 @@ const hideScrollElement = (element) => {
 }
 
 scrollButton.addEventListener("click", function () {
-  window.scroll({ top: topOfNav, behavior: "smooth" });
+  window.scroll({ top: topOfMain, behavior: "smooth" });
 })
 
 window.addEventListener("scroll", () => {
