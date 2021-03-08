@@ -179,10 +179,14 @@ nav .container {
   transform: rotate(-45deg);
 }
 
-.js-nav .nav-controls .control {
-  display: inline-block;
+.nav-controls .control {
+  display: none;
   font-size: 1rem;
   padding: 0;
+}
+
+.js-nav .nav-controls .control {
+  display: inline-block;
 }
 
 .nav-controls .control:hover,
