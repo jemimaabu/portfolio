@@ -22,7 +22,6 @@ section p {
 .intro-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
   align-items: center;
 }
 
@@ -36,6 +35,7 @@ section p {
 }
 
 .intro {
+  margin-left: 3rem;
   flex: 1 1 60%;
 }
 
@@ -57,14 +57,9 @@ section p {
 
 #up-to {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 75%;
-}
-
-.listening-section .af {
-  background-color: var(--shade-300);
 }
 
 .gr_custom_container_1613915968 {
@@ -127,9 +122,13 @@ section p {
   display: none;
 }
 
-
 @media screen and (max-width: 720px) {
   .intro-container {
     flex-direction: column-reverse;
+  }
+
+  .intro {
+    margin-left: 0;
+    margin-bottom: 1rem;
   }
 }

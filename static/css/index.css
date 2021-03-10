@@ -203,15 +203,15 @@ section .container {
 }
 
 .talks-container {
-  margin: 3rem 0;
+  margin: 1.5rem -1.5rem;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  gap: 3rem;
 }
 
 .talk-card {
   flex: 1 0 auto;
+  margin: 1.5rem;
 }
 
 .talk-card iframe {
@@ -254,5 +254,13 @@ section .container {
   .project:nth-of-type(odd) .project-content,
   .project:nth-of-type(even) .project-content {
     padding: 1rem 0 0;
+  }
+
+  .talks-container {
+    margin: 1.5rem 0;
+  }
+
+  .talk-card {
+    margin: 1.5rem 0;
   }
 }

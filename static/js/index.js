@@ -32,14 +32,6 @@ const setActiveSelector = (className) => {
   hideThemeContainer();
 }
 
-const showThemeContainer = () => {
-  themeContainer.classList.add('visible');
-  [...themeSelectors].forEach(item => {
-    item.tabIndex = 0
-  });
-  body.classList.add('no-scroll');
-}
-
 const hideThemeContainer = () => {
   themeContainer.classList.remove('visible');
   [...themeSelectors].forEach(item => {
@@ -59,6 +51,16 @@ const hideMenu = () => {
   menuButton.classList.remove('active');
   body.classList.remove('no-scroll');
 }
+
+const handleMenuBlur = (e) => {
+  if (
+    e.target !== menu &&
+    !menu.contains(e.target) &&
+    menu.classList.contains("visible")
+  ) {
+    hideMenu();
+  }
+};
 
 let previousScrollPosition = 0;
 
