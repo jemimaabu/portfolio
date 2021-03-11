@@ -372,3 +372,10 @@ footer .copyright {
     animation: fade-in-top 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .scroll-in.js-opacity {
+    opacity: 1;
+    animation: none !important;
+  }
+}

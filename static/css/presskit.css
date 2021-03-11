@@ -35,6 +35,7 @@ section {
   border: 1px solid var(--grey-color);
   padding: 0.5em 1em;
   border-radius: 2em;
+  opacity: 0.75;
   cursor: pointer;
   transition: all 500ms;
 }
@@ -61,6 +62,7 @@ input[value="medium"]:checked ~ .length-filter label[data-length="medium"],
 input[value="long"]:checked ~ .length-filter label[data-length="long"] {
   background-color: var(--shade-100);
   border-color: var(--shade-100);
+  opacity: 1;
 }
 
 input[value="short"]:checked ~ .bio[data-length="short"],

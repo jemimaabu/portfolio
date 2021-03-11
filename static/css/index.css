@@ -198,6 +198,19 @@ section .container {
   justify-content: center;
 }
 
+.project-content p {
+  font-size: 1.25rem;
+  color: var(--grey-text);
+  margin: 0.5rem 0;
+}
+
+.project-content a {
+  color: var(--grey-text);
+  text-decoration: underline;
+  text-decoration-color: var(--grey-color);
+  margin: 0.5rem 0;
+}
+
 .project:nth-of-type(odd) .project-content {
   padding-left: 3rem;
 }
@@ -209,7 +222,23 @@ section .container {
 .project-title {
   margin-top: 0;
   margin-bottom: 1rem;
+  color: var(--shade-500);
   font-size: 1.5rem;
+}
+
+.project-tags {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.project-tags .tag {
+  display: inline-block;
+  margin: 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 1px solid var(--shade-500);
+  padding: 0.25rem 0.5rem;
 }
 
 .talks-container {
@@ -264,5 +293,13 @@ section .container {
   .project:nth-of-type(odd) .project-content,
   .project:nth-of-type(even) .project-content {
     padding: 1rem 0 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .project.scrolled,
+  .project.scrolled:nth-of-type(odd) .project-image,
+  .project.scrolled:nth-of-type(even) .project-image {
+    animation: none;
   }
 }
