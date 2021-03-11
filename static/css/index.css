@@ -255,12 +255,4 @@ section .container {
   .project:nth-of-type(even) .project-content {
     padding: 1rem 0 0;
   }
-
-  .talks-container {
-    margin: 1.5rem 0;
-  }
-
-  .talk-card {
-    margin: 1.5rem 0;
-  }
 }
