@@ -14,10 +14,10 @@
   --background-color: #0d1926;
   --text-color: #f7fafc;
   --shade-100: #1a324c;
-  --shade-300: #264a73;
+  --shade-300: #4383cb;
   --shade-500: #8cb0d9;
   --secondary-color: #2a556f40;
-  --grey-color: #afbecf;
+  --grey-color: #303f50;
   --grey-text: #cfd8e2;
 }
 
@@ -77,7 +77,7 @@
   background-color: #1a324c;
 }
 #dark-select .color.shade-300 {
-  background-color: #264a73;
+  background-color: #4383cb;
 }
 #dark-select .color.shade-500 {
   background-color: #8cb0d9;

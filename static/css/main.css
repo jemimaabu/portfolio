@@ -134,7 +134,7 @@ nav .container {
 .nav-links .link:hover:before,
 .nav-links .link:focus:before,
 .nav-links .link.active:before {
-  max-width: 5rem;
+  max-width: 10rem;
 }
 
 .js-nav .nav-controls {

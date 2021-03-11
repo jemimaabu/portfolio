@@ -135,7 +135,7 @@ section .container {
   animation: bounce-top 1s ease-in-out both;
 }
 
-.intro a {
+.intro a:not([class]) {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: var(--grey-color);
@@ -163,6 +163,10 @@ section .container {
 .project-image,
 .project-content {
   flex: 1 1 50%;
+}
+
+.project.scrolled {
+  animation: fade-in 1s linear both;
 }
 
 .project.scrolled:nth-of-type(odd) .project-image {

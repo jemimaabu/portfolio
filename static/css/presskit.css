@@ -1,0 +1,70 @@
+section {
+  margin: 3rem;
+}
+
+.section-content p {
+  font-size: 1.05rem;
+}
+
+.length-filter {
+  display: flex;
+  margin: 0.5em -0.5em;
+}
+
+.length-tag {
+  margin: 0.5em;
+}
+
+#bio .subsection-title {
+  margin-bottom: 0;
+}
+
+#bio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.length-tag label {
+  display: inline-block;
+  text-align: center;
+  min-width: 6em;
+  color: var(--grey-text);
+  border: 1px solid var(--grey-color);
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.length-tag label:hover,
+.length-tag label:focus,
+.length-tag label:focus-within {
+  background-color: var(--grey-color);
+}
+
+.bio {
+  display: none;
+  font-size: 1.1em;
+  color: var(--grey-text);
+}
+
+.bio p {
+  max-width: 65ch;
+  font-size: 1.1rem;
+}
+
+input[value="short"]:checked ~ .length-filter label[data-length="short"],
+input[value="medium"]:checked ~ .length-filter label[data-length="medium"],
+input[value="long"]:checked ~ .length-filter label[data-length="long"] {
+  background-color: var(--shade-100);
+  border-color: var(--shade-100);
+}
+
+input[value="short"]:checked ~ .bio[data-length="short"],
+input[value="medium"]:checked ~ .bio[data-length="medium"],
+input[value="long"]:checked ~ .bio[data-length="long"] {
+  display: block;
+}

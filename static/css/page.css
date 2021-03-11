@@ -1,0 +1,29 @@
+main {
+  margin-top: 4rem;
+  animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--shade-500);
+}
+
+section a:not([class]) {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--grey-color);
+}
+
+section p {
+  color: var(--grey-text);
+  font-size: 1.25rem;
+  line-height: 140%;
+}
+
+.subsection-title {
+  text-transform: uppercase;
+  color: var(--shade-500);
+}

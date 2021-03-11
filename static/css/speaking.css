@@ -1,0 +1,77 @@
+body {
+  scroll-behavior: smooth;
+}
+
+section {
+  margin: 3rem 0;
+}
+
+.talks-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td,
+.th {
+  display: table-cell;
+  padding: 10px;
+  border: 1px solid var(--grey-color);
+  width: 25%;
+}
+
+.th {
+  display: table-cell;
+  font-weight: bold;
+}
+
+.tr:nth-of-type(odd) {
+  background-color: var(--grey-color);
+}
+
+@media (max-width: 750px) {
+  .talks-table,
+  .tr {
+    display: block;
+  }
+
+  .tr:not(:last-of-type) {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--grey-color);
+  }
+
+  .table-header {
+    display: none;
+  }
+
+  .td {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 0 0 5px;
+  }
+  .td[data-attr="conference"] {
+    padding-bottom: 10px;
+    color: var(--shade-300);
+    font-size: 1.1em;
+  }
+  .td[data-attr="talk"]:before {
+    content: "Talk: ";
+    font-weight: bold;
+    font-style: normal;
+  }
+  .td[data-attr="date"]:before {
+    content: "Date: ";
+    font-weight: bold;
+    font-style: normal;
+  }
+  .td[data-attr="location"]:before {
+    content: "Location: ";
+    font-weight: bold;
+    font-style: normal;
+  }
+}

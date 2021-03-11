@@ -88,6 +88,8 @@ const handleNavScroll = () => {
   }
 }
 
+getTheme();
+
 themeDisplay.addEventListener("click", function () {
   hideMenu()
   if (themeContainer.classList.contains('visible')) {
@@ -106,8 +108,11 @@ menuButton.addEventListener("click", function () {
   }
 })
 
+menu.addEventListener("click", function () {
+  hideThemeContainer();
+  hideMenu()
+})
+
 window.addEventListener('scroll', () => {
   handleNavScroll()
 })
-
-getTheme();
