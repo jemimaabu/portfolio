@@ -135,6 +135,12 @@ section .container {
   animation: bounce-top 1s ease-in-out both;
 }
 
+.intro a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--grey-color);
+}
+
 .project-container {
   display: flex;
   flex-direction: column;

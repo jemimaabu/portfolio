@@ -37,7 +37,6 @@ const showThemeContainer = () => {
   [...themeSelectors].forEach(item => {
     item.tabIndex = 0
   });
-  body.classList.add('no-scroll');
 }
 
 const hideThemeContainer = () => {
@@ -45,7 +44,6 @@ const hideThemeContainer = () => {
   [...themeSelectors].forEach(item => {
     item.tabIndex = -1
   });
-  body.classList.remove('no-scroll');
 }
 
 const showMenu = () => {
