@@ -10,8 +10,8 @@ const themeSelectors = document.getElementsByClassName('theme-select');
 mainNav.classList.add('js-nav');
 
 const getTheme = () => {
-  const theme = localStorage.getItem('theme') === null ? 'light' : localStorage.getItem('theme');
-  setActiveSelector(theme);
+  const theme = localStorage.getItem('theme');
+  theme && setActiveSelector(theme);
   root.className = theme
 }
 

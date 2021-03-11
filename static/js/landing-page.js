@@ -52,14 +52,7 @@ const hideScrollElement = (element) => {
   element.classList.remove('scrolled')
 }
 
-scrollButton.addEventListener("click", function () {
-  window.scroll({ top: topOfMain, behavior: "smooth" });
-})
-
-window.addEventListener("scroll", () => {
-  handleHeaderScroll();
-  handleVisibleNav();
-
+const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
     if (elementInViewport(el, 1.25)) {
       displayScrollElement(el);
@@ -67,4 +60,18 @@ window.addEventListener("scroll", () => {
       hideScrollElement(el)
     }
   })
+}
+
+scrollButton.addEventListener("click", function () {
+  window.scroll({ top: topOfMain, behavior: "smooth" });
+})
+
+const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+window.addEventListener("scroll", () => {
+  handleHeaderScroll();
+  handleVisibleNav();
+  if (mediaQuery && !mediaQuery.matches) {
+    handleScrollAnimation()
+  }
 });

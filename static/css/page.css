@@ -17,6 +17,11 @@ section a:not([class]) {
   text-decoration-color: var(--grey-color);
 }
 
+.section-link {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 section p {
   color: var(--grey-text);
   font-size: 1.25rem;
