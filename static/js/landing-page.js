@@ -62,6 +62,18 @@ const handleScrollAnimation = () => {
   })
 }
 
+var throttleTimer;
+
+const throttle = (callback, time) => {
+  if (throttleTimer) return;
+
+  throttleTimer = true;
+  setTimeout(() => {
+    callback();
+    throttleTimer = false;
+  }, time);
+}
+
 scrollButton.addEventListener("click", function () {
   window.scroll({ top: topOfMain, behavior: "smooth" });
 })
@@ -72,6 +84,6 @@ window.addEventListener("scroll", () => {
   handleHeaderScroll();
   handleVisibleNav();
   if (mediaQuery && !mediaQuery.matches) {
-    handleScrollAnimation()
+    throttle(handleScrollAnimation, 250)
   }
 });
