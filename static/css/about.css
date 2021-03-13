@@ -38,44 +38,6 @@
   color: var(--grey-text);
 }
 
-input#read-more {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.read-more-label {
-  font-size: 1.1rem;
-  color: var(--grey-text);
-  text-decoration-color: var(--grey-color);
-  cursor: pointer;
-  transition: color 500ms;
-}
-
-.read-more-label:after {
-  content: " more...";
-}
-
-input#read-more:focus ~ .read-more-label,
-.read-more-label:hover {
-  text-decoration: underline;
-  color: var(--text-color);
-}
-
-input#read-more:checked ~ .read-more-label:after {
-  content: " less...";
-}
-
-.main-text {
-  display: none;
-}
-
-input#read-more:checked ~ .main-text {
-  display: block;
-}
-
 @media screen and (max-width: 720px) {
   .intro-container {
     flex-direction: column-reverse;
