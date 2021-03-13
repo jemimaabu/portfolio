@@ -49,13 +49,11 @@ const hideThemeContainer = () => {
 const showMenu = () => {
   menu.classList.add('visible');
   menuButton.classList.add('active');
-  body.classList.add('no-scroll');
 }
 
 const hideMenu = () => {
   menu.classList.remove('visible');
   menuButton.classList.remove('active');
-  body.classList.remove('no-scroll');
 }
 
 let previousScrollPosition = 0;

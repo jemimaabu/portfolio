@@ -339,7 +339,8 @@ footer .copyright {
 }
 
 @media screen and (min-width: 721px) {
-  .hamburger {
+  .hamburger,
+  .nav-links .social-media {
     display: none;
   }
 }
@@ -370,6 +371,16 @@ footer .copyright {
     background-color: var(--background-color);
     visibility: visible;
     animation: fade-in-top 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+
+  .js-nav .nav-links .social-media {
+    display: flex;
+    margin: 1rem -0.5rem;
+  }
+
+  .js-nav .nav-links .social-media a {
+    margin: 0 1rem;
+    font-size: 1.1rem;
   }
 }
 

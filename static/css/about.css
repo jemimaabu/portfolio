@@ -69,16 +69,11 @@ input#read-more:checked ~ .read-more-label:after {
 }
 
 .main-text {
-  max-height: 0;
-  overflow: hidden;
-  pointer-events: none;
-  user-select: none;
+  display: none;
 }
 
 input#read-more:checked ~ .main-text {
-  max-height: none;
-  pointer-events: auto;
-  user-select: auto;
+  display: block;
 }
 
 @media screen and (max-width: 720px) {
