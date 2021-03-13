@@ -308,6 +308,7 @@ nav .container {
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   padding-top: 5rem;
   padding-bottom: 2rem;
@@ -315,11 +316,11 @@ footer {
 
 footer .social-media {
   display: flex;
-  margin: 0 -0.5rem;
+  margin-left: -0.5rem;
 }
 
 footer .social-media a {
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   font-size: 1.1rem;
 }
 
