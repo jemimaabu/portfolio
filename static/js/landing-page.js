@@ -6,22 +6,23 @@ const nav = document.querySelector("nav");
 const scrollButton = document.querySelector(".scroll-button");
 const topOfMain = main.getBoundingClientRect().top;
 const scrollElements = document.querySelectorAll('.scroll-in');
+const projects = document.querySelectorAll('.project')
 
 header.classList.add('js-fixed');
 scrollElements.forEach((el) => {
   el.classList.add('js-opacity');
 })
+projects.forEach((el) => {
+  el.classList.add('js-active');
+})
 
 const elementInViewport = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
-
   return (elementTop <= ((window.innerHeight || document.documentElement.clientHeight) / dividend))
 }
 
 const elementOutofView = (el) => {
-
   const elementTop = el.getBoundingClientRect().top;
-
   return (elementTop > (window.innerHeight || document.documentElement.clientHeight))
 }
 
@@ -61,6 +62,16 @@ const handleScrollAnimation = () => {
     }
   })
 }
+
+projects.forEach((el) => {
+  el.addEventListener('click', () => {
+    if (el.classList.contains('active')) {
+      el.classList.remove('active')
+    } else {
+      el.classList.add('active')
+    }
+  })
+})
 
 var throttleTimer;
 
