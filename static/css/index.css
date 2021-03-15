@@ -171,6 +171,7 @@ section .container {
 }
 
 .project:hover .project-image img,
+.project.active .project-image img,
 .project:focus-within .project-image img {
   filter: brightness(100%) grayscale(0);
 }
@@ -338,11 +339,6 @@ section .container {
 
   header h2 {
     font-size: 1.25rem;
-  }
-
-  .project,
-  .project:nth-of-type(even) {
-    flex-direction: column;
   }
 
   .project.js-active.active .project-content-container,

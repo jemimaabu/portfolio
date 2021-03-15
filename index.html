@@ -50,7 +50,7 @@
         <a href="projects.html" class="link">projects</a>
         <a href="talks.html" class="link">talks</a>
         <a href="articles.html" class="link">articles</a>
-        <a href="contact.html" class="link">contact</a>
+        <a href="index.html#contact" class="link">contact</a>
         <div class="social-media">
           <a href="https://www.github.com/jemimaabu" title="Github">
             <i class="fa fa-github"></i>
@@ -166,7 +166,7 @@
                 href="https://www.freecodecamp.org/news/author/jemima/">freeCodeCamp</a> , <a
                 href="https://css-tricks.com/author/jemimaabu/">CSSTricks</a>
               and
-              <a href="https://tutsplus.com/authors/jemimaabu">Envato Tuts</a> .
+              <a href="https://tutsplus.com/authors/jemima-abu">Envato Tuts</a> .
             </p>
           </div>
           <div class="section-link">
@@ -190,7 +190,6 @@
               <img src="./static/images/projects/trainella.png" alt="Trainella yoga website">
             </div>
             <div class="project-content-container">
-
               <div class="project-content">
                 <h3 class="project-title subsection-title">
                   <a href="https://trainella.com"> Trainella </a>
@@ -383,16 +382,20 @@
         <div class="articles-container">
           <div class="article scroll-in">
             <div class="article-image">
-              <img src="./static/images/articles/portfolio-guide.png"
-                alt="A Beginner's Guide To Creating A Portfolio Website">
+              <a href="https://www.freecodecamp.org/news/a-beginners-guide-to-creating-a-portfolio-website/"
+                target="_blank" rel="noopener noreferrer">
+                <img src="./static/images/articles/portfolio-guide.png"
+                  alt="A Beginner's Guide To Creating A Portfolio Website">
+              </a>
             </div>
             <div class="article-content">
               <div class="article-site">
-                <a
-                  href="https://www.freecodecamp.org/news/a-beginners-guide-to-creating-a-portfolio-website/">freecodecamp</a>
+                <a href="https://www.freecodecamp.org/news/a-beginners-guide-to-creating-a-portfolio-website/"
+                  target="_blank" rel="noopener noreferrer">freecodecamp</a>
               </div>
               <h3 class="article-title">
-                <a href="https://www.freecodecamp.org/news/a-beginners-guide-to-creating-a-portfolio-website/">
+                <a href="https://www.freecodecamp.org/news/a-beginners-guide-to-creating-a-portfolio-website/"
+                  target="_blank" rel="noopener noreferrer">
                   I Helped 6 Developers Set Up Their Portfolio Website. Here's What I Learned.
                 </a>
               </h3>
@@ -406,16 +409,20 @@
           </div>
           <div class="article scroll-in">
             <div class="article-image">
-              <img src="./static/images/articles/js-scroll.png"
-                alt="Handling Scroll Based Animation With Vanilla JavaScript">
+              <a href="https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671"
+                target="_blank" rel="noopener noreferrer">
+                <img src="./static/images/articles/js-scroll.png"
+                  alt="Handling Scroll Based Animation With Vanilla JavaScript">
+              </a>
             </div>
             <div class="article-content">
               <div class="article-site">
-                <a
-                  href="https://www.freecodecamp.org/news/a-beginners-guide-to-creating-a-portfolio-website/">envatotuts+</a>
+                <a href="https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671"
+                  target="_blank" rel="noopener noreferrer">envatotuts+</a>
               </div>
               <h3 class="article-title">
-                <a href="https://www.freecodecamp.org/news/a-beginners-guide-to-creating-a-portfolio-website/">
+                <a href="https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671"
+                  target="_blank" rel="noopener noreferrer">
                   Handling Scroll Based Animation With Vanilla JavaScript
                 </a>
               </h3>
@@ -429,14 +436,19 @@
           </div>
           <div class="article scroll-in">
             <div class="article-image">
-              <img src="./static/images/articles/conferences.png" alt="How To Find Conferences To Speak At">
+              <a href="https://blog.jemimaabu.com/how-to-find-conferences-to-speak-at" target="_blank"
+                rel="noopener noreferrer">
+                <img src="./static/images/articles/conferences.png" alt="How To Find Conferences To Speak At">
+              </a>
             </div>
             <div class="article-content">
               <div class="article-site">
-                <a href="https://blog.jemimaabu.com/how-to-find-conferences-to-speak-at">hashnode</a>
+                <a href="https://blog.jemimaabu.com/how-to-find-conferences-to-speak-at" target="_blank"
+                  rel="noopener noreferrer">hashnode</a>
               </div>
               <h3 class="article-title">
-                <a href="https://blog.jemimaabu.com/how-to-find-conferences-to-speak-at">
+                <a href="https://blog.jemimaabu.com/how-to-find-conferences-to-speak-at" target="_blank"
+                  rel="noopener noreferrer">
                   How To Find Conferences To Speak At
                 </a>
               </h3>
@@ -453,6 +465,49 @@
         </div>
         <div class="section-link scroll-in">
           <a href="talks.html" class="link-btn">View All Articles</a>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">Contact <span class="title-icon">&#128231;</span></h2>
+          <p class="section-subtitle">
+            Invite me to speak at your conference, tell me about your available job opportunities or just say hi :)
+          </p>
+        </div>
+        <div class="contact-content">
+
+          <div class="form-container scroll-in">
+            <form name="contact" method="POST" data-netlify="true" action="/index.html#contact?success">
+              <div>
+                <label for="name">Name:<br> <input type="text" id="name" name="name" required /></label>
+              </div>
+              <div>
+                <label for="email">Email:<br> <input type="email" id="email" name="email" required /></label>
+              </div>
+              <div>
+                <label>Subject:<br> <select name="subject[]" multiple>
+                    <option value="conference">Conference Invitation</option>
+                    <option value="job">Job Opportunity</option>
+                    <option value="general">General Enquiry</option>
+                  </select></label>
+              </div>
+              <div>
+                <label for="message">Message:<br> <textarea required maxlength="1000" id="message" name="message"
+                    oninput="messageCount()"></textarea></label>
+                <small><span id="message-count">1000</span> characters</small>
+              </div>
+              <div style="text-align: center;">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+          <div class="links-container scroll-in">
+            You can also:
+            <a href="presskit.html" class="link-btn">View My Press Kit</a>
+            <a href="" class="link-btn">Download My Resume</a>
+          </div>
         </div>
       </div>
     </section>
@@ -479,7 +534,7 @@
       </a>
     </div>
     <div class="copyright">
-      designed & built by Jemima Abu &hearts;
+      designed & built by Jemima Abu <span class="heart">&hearts;</span>
     </div>
   </footer>
 </body>
