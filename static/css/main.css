@@ -24,7 +24,7 @@ a {
   text-decoration: none;
 }
 
-a.link-btn {
+.link-btn {
   display: inline-block;
   border: 2px solid var(--grey-color);
   background-color: transparent;
@@ -36,8 +36,8 @@ a.link-btn {
   transition: border 500ms, background-color 500ms, color 500ms;
 }
 
-a.link-btn:hover,
-a.link-btn:focus {
+.link-btn:hover,
+.link-btn:focus {
   outline: none;
   color: var(--background-color);
   background-color: var(--shade-500);

@@ -477,34 +477,36 @@
           </p>
         </div>
         <div class="contact-content">
-
           <div class="form-container scroll-in">
             <form name="contact" method="POST" data-netlify="true" action="/index.html#contact?success">
-              <div>
-                <label for="name">Name:<br> <input type="text" id="name" name="name" required /></label>
+              <div class="input-container">
+                <input type="text" id="name" name="name" required class="form-input" />
+                <label for="name">Name:</label>
+              </div>
+              <div class="input-container">
+                <input type="email" id="email" name="email" required class="form-input" />
+                <label for="email">Email:</label>
+              </div>
+              <div class="input-container">
+                <input type="text" id="subject" name="subject" class="form-input" />
+                <label for="subject">Subject (optional): </label>
+              </div>
+              <div class="input-container">
+                <textarea required maxlength="1000" id="message" name="message" class="form-input"></textarea>
+                <label for="message">Message:<br> </label>
+                <small>
+                  <span id="message-count">1000</span> characters
+                </small>
               </div>
               <div>
-                <label for="email">Email:<br> <input type="email" id="email" name="email" required /></label>
-              </div>
-              <div>
-                <label>Subject:<br> <select name="subject[]" multiple>
-                    <option value="conference">Conference Invitation</option>
-                    <option value="job">Job Opportunity</option>
-                    <option value="general">General Enquiry</option>
-                  </select></label>
-              </div>
-              <div>
-                <label for="message">Message:<br> <textarea required maxlength="1000" id="message" name="message"
-                    oninput="messageCount()"></textarea></label>
-                <small><span id="message-count">1000</span> characters</small>
-              </div>
-              <div style="text-align: center;">
-                <button type="submit">Send</button>
+                <button type="submit" class="link-btn">Send</button>
               </div>
             </form>
           </div>
           <div class="links-container scroll-in">
-            You can also:
+            <p>
+              You can also:
+            </p>
             <a href="presskit.html" class="link-btn">View My Press Kit</a>
             <a href="" class="link-btn">Download My Resume</a>
           </div>

@@ -320,6 +320,87 @@ section .container {
   color: var(--text-color);
 }
 
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5rem;
+}
+
+.form-container,
+.links-container {
+  margin: 0 1.5rem;
+}
+
+.form-container {
+  flex: 1 1 450px;
+}
+
+.input-container {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.input-container .form-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  caret-color: var(--shade-300);
+  border: 1px solid var(--grey-color);
+  color: var(--text-color);
+  transition: border 500ms;
+  padding: 1.85rem 1rem 0.5rem;
+  font-size: 1.15rem;
+}
+
+.input-container textarea {
+  height: 300px;
+  font: inherit;
+}
+
+.input-container label {
+  display: block;
+  position: absolute;
+  width: 100%;
+  font-size: 1.15rem;
+  top: 1rem;
+  padding: 0.25rem 1rem;
+  color: var(--grey-text);
+  transform-origin: left;
+  user-select: none;
+  transition: all 500ms;
+}
+
+.input-container .form-input:hover,
+.input-container .form-input:focus {
+  outline: none;
+  border-color: var(--shade-300);
+}
+
+.form-input:focus + label,
+.focused label {
+  top: 0rem;
+  font-size: 0.75rem;
+  background-color: var(--shade-500);
+  color: var(--background-color);
+  user-select: auto;
+}
+
+.links-container {
+  flex: 1 1 300px;
+}
+
+.links-container p {
+  font-size: 1.15rem;
+  color: var(--grey-text);
+}
+
+.contact-content .link-btn {
+  border-radius: 0;
+  margin: 1.5rem 0;
+  display: block;
+  width: fit-content;
+}
+
 @media screen and (max-width: 960px) {
   header .fixed-header:before {
     height: 51%;
