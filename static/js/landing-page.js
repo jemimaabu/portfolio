@@ -127,3 +127,8 @@ window.addEventListener("scroll", () => {
     throttle(handleScrollAnimation, 250)
   }
 });
+
+const contactMessage = document.querySelector('.success-message');
+if (window.location.search.includes('success')) {
+  contactMessage.innerHTML = "Thank you for your message, I'll get back to you as soon as I can &#128578;"
+}
