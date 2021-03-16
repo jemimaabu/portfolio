@@ -35,7 +35,7 @@ header h1 p {
 
 header h2 {
   max-width: 65ch;
-  font-weight: 100;
+  font-weight: 200;
   color: var(--shade-500);
   margin: 0;
 }
