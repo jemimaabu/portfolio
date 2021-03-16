@@ -320,19 +320,8 @@ section .container {
   color: var(--text-color);
 }
 
-.contact-content {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -1.5rem;
-}
-
-.form-container,
-.links-container {
-  margin: 0 1.5rem;
-}
-
 .form-container {
-  flex: 1 1 450px;
+  max-width: 600px;
 }
 
 .input-container {
@@ -348,12 +337,13 @@ section .container {
   border: 1px solid var(--grey-color);
   color: var(--text-color);
   transition: border 500ms;
-  padding: 1.85rem 1rem 0.5rem;
+  padding: 1.75rem 1rem 0.5rem;
   font-size: 1.15rem;
 }
 
 .input-container textarea {
   height: 300px;
+  resize: none;
   font: inherit;
 }
 
@@ -362,7 +352,7 @@ section .container {
   position: absolute;
   width: 100%;
   font-size: 1.15rem;
-  top: 1rem;
+  top: 15px;
   padding: 0.25rem 1rem;
   color: var(--grey-text);
   transform-origin: left;
@@ -399,6 +389,10 @@ section .container {
   margin: 1.5rem 0;
   display: block;
   width: fit-content;
+}
+
+footer {
+  padding-top: 0;
 }
 
 @media screen and (max-width: 960px) {

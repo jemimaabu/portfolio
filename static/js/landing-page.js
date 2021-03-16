@@ -8,6 +8,7 @@ const topOfMain = main.getBoundingClientRect().top;
 const scrollElements = document.querySelectorAll('.scroll-in');
 const projects = document.querySelectorAll('.project')
 const inputs = document.querySelectorAll(".form-input");
+const message = document.querySelector("#message")
 
 header.classList.add('js-fixed');
 scrollElements.forEach((el) => {
@@ -64,6 +65,15 @@ const handleScrollAnimation = () => {
   })
 }
 
+const handleMessageCount = () => {
+  var msg = document.getElementById("message").value;
+  var msgCount = document.getElementById("message-count")
+  var msgLength = msg.length;
+  const maxLength = 1000;
+  var charLeft = maxLength - msgLength;
+  msgCount.innerText = charLeft;
+}
+
 projects.forEach((el) => {
   el.addEventListener('click', () => {
     if (el.classList.contains('active')) {
@@ -89,6 +99,8 @@ inputs.forEach((input) => {
     }
   });
 });
+
+message.addEventListener("input", handleMessageCount)
 
 var throttleTimer;
 
