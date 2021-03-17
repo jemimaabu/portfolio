@@ -320,8 +320,42 @@ section .container {
   color: var(--text-color);
 }
 
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-content .link-btn {
+  border-radius: 0;
+  margin: 1.5rem 0;
+  display: block;
+  width: fit-content;
+}
+
+.links-container {
+  flex: 0 1 300px;
+}
+
+.links-container h3 {
+  margin: 1.5rem 0 0.5rem;
+  text-transform: uppercase;
+  color: var(--shade-500);
+}
+
+.links-container li {
+  margin-bottom: 1rem;
+}
+
+.links-container a:hover,
+.links-container a:focus {
+  text-decoration: underline;
+}
+
 .form-container {
+  flex: 1 0 auto;
   max-width: 600px;
+  width: 100%;
+  margin-right: 3rem;
 }
 
 .input-container {
@@ -373,22 +407,6 @@ section .container {
   background-color: var(--shade-500);
   color: var(--background-color);
   user-select: auto;
-}
-
-.links-container {
-  flex: 1 1 300px;
-}
-
-.links-container p {
-  font-size: 1.15rem;
-  color: var(--grey-text);
-}
-
-.contact-content .link-btn {
-  border-radius: 0;
-  margin: 1.5rem 0;
-  display: block;
-  width: fit-content;
 }
 
 footer {
