@@ -5,7 +5,7 @@ header {
 }
 
 header.js-fixed {
-  height: 125vh;
+  height: 110vh;
 }
 
 .header-container {
@@ -110,7 +110,7 @@ section .container {
 
 .section-link {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .section-title {
@@ -142,17 +142,7 @@ section .container {
 }
 
 .project-container {
-  display: flex;
-  flex-direction: column;
   margin: 3rem 0;
-}
-
-.project + .project {
-  margin-top: 5rem;
-}
-
-.project:nth-of-type(even) {
-  flex-direction: row-reverse;
 }
 
 .project.scrolled {
@@ -186,6 +176,7 @@ section .container {
 .project:not(.js-active):hover .project-content-container,
 .project:focus-within .project-content-container {
   max-height: 1000px;
+  max-width: 1000px;
   box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
 }
 
@@ -425,6 +416,36 @@ footer {
   }
 }
 
+@media screen and (min-width: 721px) {
+  .project-container {
+    display: flex;
+    overflow: scroll;
+  }
+
+  .project {
+    display: flex;
+    transition: all 1000ms ease-in-out;
+  }
+
+  .project.active {
+    flex: 0 0 100%;
+  }
+
+  .project + .project {
+    margin-left: 3rem;
+  }
+
+  .project-content-container {
+    max-width: 0;
+  }
+
+  .project.js-active.active .project-content-container,
+  .project:not(.js-active):hover .project-content-container,
+  .project:focus-within .project-content-container {
+    max-width: 1000px;
+  }
+}
+
 @media screen and (max-width: 720px) {
   header h1 {
     font-size: 2.5rem;
@@ -432,6 +453,10 @@ footer {
 
   header h2 {
     font-size: 1.25rem;
+  }
+
+  .project + .project {
+    margin-top: 3rem;
   }
 
   .project.js-active.active .project-content-container,
