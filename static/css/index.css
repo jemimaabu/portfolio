@@ -141,6 +141,11 @@ section .container {
   text-decoration-color: var(--grey-color);
 }
 
+.wave-border {
+  height: 150px;
+  overflow: hidden;
+}
+
 .project-container {
   margin: 3rem 0;
 }
@@ -169,7 +174,6 @@ section .container {
 .project-content-container {
   max-height: 0;
   overflow: hidden;
-  transition: all 1000ms ease-in-out;
 }
 
 .project.js-active.active .project-content-container,
@@ -424,7 +428,6 @@ footer {
 
   .project {
     display: flex;
-    transition: all 1000ms ease-in-out;
   }
 
   .project.active {
@@ -457,6 +460,10 @@ footer {
 
   .project + .project {
     margin-top: 3rem;
+  }
+
+  .project-content-container {
+    transition: all 1000ms ease-in-out;
   }
 
   .project.js-active.active .project-content-container,
