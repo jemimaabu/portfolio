@@ -38,6 +38,51 @@
   color: var(--grey-text);
 }
 
+.main-text p {
+  font-size: 1.25rem;
+}
+
+summary .subsection-title {
+  display: inline;
+}
+
+details {
+  margin: 1rem 0;
+}
+
+details .main-text {
+  margin: 1rem 1rem 3rem;
+}
+
+details .text {
+  padding: 2rem 0;
+  border-bottom: 1px dashed var(--shade-300);
+}
+
+.text-header {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+#experience .text-header a,
+#volunteering .text-header a {
+  color: var(--shade-300);
+  text-decoration: none;
+}
+
+.text p.text-subtitle {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.text li {
+  max-width: 65ch;
+  font-size: 1.15rem;
+  color: var(--grey-text);
+  margin: 0;
+}
+
 @media screen and (max-width: 720px) {
   .intro-container {
     flex-direction: column-reverse;
