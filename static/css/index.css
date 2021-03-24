@@ -147,12 +147,12 @@ section .container {
 }
 
 .project-container {
-  margin: 3rem -5rem;
+  margin: 3rem 0;
 }
 
 .project {
   display: flex;
-  margin: 5rem;
+  margin: 3rem 0;
 }
 
 .project:nth-of-type(even) {
