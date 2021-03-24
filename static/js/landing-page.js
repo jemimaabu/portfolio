@@ -14,9 +14,6 @@ header.classList.add('js-fixed');
 scrollElements.forEach((el) => {
   el.classList.add('js-opacity');
 })
-projects.forEach((el) => {
-  el.classList.add('js-active');
-})
 
 const elementInViewport = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;

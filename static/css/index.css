@@ -147,11 +147,24 @@ section .container {
 }
 
 .project-container {
-  margin: 3rem 0;
+  margin: 3rem -5rem;
+}
+
+.project {
+  display: flex;
+  margin: 5rem;
+}
+
+.project:nth-of-type(even) {
+  flex-direction: row-reverse;
 }
 
 .project.scrolled {
   animation: fade-in 1s linear both;
+}
+
+.project.scrolled .project-content {
+  animation: fade-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .project-image img {
@@ -171,25 +184,10 @@ section .container {
   filter: brightness(100%) grayscale(0);
 }
 
-.project-content-container {
-  max-height: 0;
-  overflow: hidden;
-}
-
-.project.js-active.active .project-content-container,
-.project:not(.js-active):hover .project-content-container,
-.project:focus-within .project-content-container {
-  max-height: 1000px;
-  max-width: 1000px;
-  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
-}
-
 .project-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--background-color);
-  padding: 2rem;
 }
 
 .project-content p {
@@ -226,15 +224,15 @@ section .container {
 }
 
 .project-links {
-  margin: 1rem 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: end;
+  margin: 0 -1rem;
 }
 
 .project-links a {
   color: var(--grey-text);
-  margin: 0.5rem 0;
+  margin: 1rem;
   border-radius: 0;
 }
 
@@ -422,30 +420,39 @@ footer {
 
 @media screen and (min-width: 721px) {
   .project-container {
-    display: flex;
-    overflow: scroll;
+    margin: 0 -5rem;
   }
 
   .project {
-    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem;
+    padding: 5rem 0;
+    border-bottom: 1px dashed var(--shade-300);
   }
 
-  .project.active {
-    flex: 0 0 100%;
+  .project.scrolled .project-image {
+    animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
-  .project + .project {
+  .project:nth-of-type(even).scrolled .project-image {
+    animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .project-image,
+  .project-content-container {
+    width: 50%;
+  }
+
+  .project:nth-of-type(odd) .project-content-container {
     margin-left: 3rem;
   }
 
-  .project-content-container {
-    max-width: 0;
+  .project:nth-of-type(even) .project-content-container {
+    margin-right: 3rem;
   }
 
-  .project.js-active.active .project-content-container,
-  .project:not(.js-active):hover .project-content-container,
-  .project:focus-within .project-content-container {
-    max-width: 1000px;
+  .project-content p {
+    color: var(--text-color);
   }
 }
 
@@ -458,22 +465,14 @@ footer {
     font-size: 1.25rem;
   }
 
-  .project + .project {
-    margin-top: 3rem;
+  .project,
+  .project:nth-of-type(even) {
+    flex-direction: column;
   }
 
   .project-content-container {
-    transition: all 1000ms ease-in-out;
-  }
-
-  .project.js-active.active .project-content-container,
-  .project:not(.js-active):hover .project-content-container,
-  .project:focus-within .project-content-container {
-    max-height: 1500px;
-  }
-
-  .project-content p {
-    margin: 1rem 0;
+    background-color: var(--background-color);
+    padding: 2rem;
   }
 }
 
