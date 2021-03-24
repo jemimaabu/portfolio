@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #about.container {
   max-width: 960px;
 }
@@ -44,6 +48,7 @@
 
 summary .subsection-title {
   display: inline;
+  cursor: pointer;
 }
 
 details {
@@ -57,6 +62,10 @@ details .main-text {
 details .text {
   padding: 2rem 0;
   border-bottom: 1px dashed var(--shade-300);
+}
+
+details .text:first-of-type {
+  padding-top: 0;
 }
 
 .text-header {
@@ -81,6 +90,20 @@ details .text {
   font-size: 1.15rem;
   color: var(--grey-text);
   margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 0;
+}
+
+.tags li {
+  font-size: 1rem;
+  margin: 0.25rem 2rem 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 
 @media screen and (max-width: 720px) {
