@@ -64,6 +64,10 @@ details .text {
   border-bottom: 1px dashed var(--shade-300);
 }
 
+details .list .text {
+  padding-bottom: 1rem;
+}
+
 details .text:first-of-type {
   padding-top: 0;
 }
