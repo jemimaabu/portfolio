@@ -35,6 +35,10 @@ section {
   font-weight: 400;
 }
 
+.td[data-attr="conference"] {
+  color: var(--shade-300);
+}
+
 .table-header {
   background-color: var(--grey-color);
 }
@@ -46,6 +50,17 @@ section {
 
 .main-text .text:first-of-type {
   padding-top: 0;
+}
+
+.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-list li.text {
+  margin: 0.25rem 2rem 0.25rem 0;
+  padding: 0;
+  border: none;
 }
 
 .text-header {
@@ -104,7 +119,6 @@ section {
 
   .td[data-attr="conference"] {
     padding-bottom: 0.625rem;
-    color: var(--shade-300);
     font-size: 1.1rem;
   }
 
