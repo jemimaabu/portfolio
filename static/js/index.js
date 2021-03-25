@@ -20,7 +20,7 @@ const setTheme = (className) => {
   root.className = '';
   root.classList.add(className);
   setActiveSelector(className);
-  const shade = getComputedStyle(document.documentElement).getPropertyValue('--shade-300');
+  const shade = getComputedStyle(document.documentElement).getPropertyValue('--shade-100');
   document.querySelector('meta[name="theme-color"]').setAttribute('content', shade);
   localStorage.setItem('theme', className)
 }
