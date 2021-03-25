@@ -19,9 +19,10 @@ section {
 .td,
 .th {
   display: table-cell;
-  padding: 10px;
+  padding: 0.625rem;
   border: 1px solid var(--grey-color);
   width: 25%;
+  vertical-align: middle;
 }
 
 .th {
@@ -29,19 +30,65 @@ section {
   font-weight: bold;
 }
 
-.tr:nth-of-type(odd) {
+.td h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.table-header {
   background-color: var(--grey-color);
 }
 
+.main-text .text {
+  padding: 1rem 0;
+  border-bottom: 1px dashed var(--shade-300);
+}
+
+.main-text .text:first-of-type {
+  padding-top: 0;
+}
+
+.text-header {
+  color: var(--shade-300);
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 0 0.625rem;
+}
+
+.main-text p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: normal;
+}
+
+.text p[data-attr]::before {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.text p[data-attr="date"]:before {
+  content: "Date: ";
+}
+
+.text p[data-attr="location"]:before {
+  content: "Location: ";
+}
+
 @media (max-width: 750px) {
-  .talks-table,
-  .tr {
+  .talks-table {
     display: block;
   }
 
-  .tr:not(:last-of-type) {
-    padding-bottom: 10px;
+  .tr {
+    display: list-item;
+    margin-left: 2rem;
+    padding: 1rem 0;
     border-bottom: 1px dashed var(--grey-color);
+  }
+
+  .table-header + .tr {
+    padding-top: 0;
   }
 
   .table-header {
@@ -52,26 +99,29 @@ section {
     width: 100%;
     display: block;
     border: none;
-    padding: 0 0 5px;
+    padding: 0 0 0.5rem;
   }
+
   .td[data-attr="conference"] {
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     color: var(--shade-300);
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
+
+  .td[data-attr]::before {
+    font-weight: bold;
+    font-style: normal;
+  }
+
   .td[data-attr="talk"]:before {
     content: "Talk: ";
-    font-weight: bold;
-    font-style: normal;
   }
+
   .td[data-attr="date"]:before {
     content: "Date: ";
-    font-weight: bold;
-    font-style: normal;
   }
+
   .td[data-attr="location"]:before {
     content: "Location: ";
-    font-weight: bold;
-    font-style: normal;
   }
 }
