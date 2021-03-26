@@ -32,3 +32,10 @@ section p {
   text-transform: uppercase;
   color: var(--shade-500);
 }
+
+.page-nav {
+  padding: 3rem 0 0rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
