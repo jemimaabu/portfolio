@@ -108,6 +108,10 @@ section .container {
   padding: 5rem 0;
 }
 
+section:last-of-type .container {
+  padding-bottom: 0;
+}
+
 .section-link {
   text-align: center;
   margin-top: 5rem;
@@ -139,11 +143,6 @@ section .container {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: var(--grey-color);
-}
-
-.wave-border {
-  height: 150px;
-  overflow: hidden;
 }
 
 .project-container {

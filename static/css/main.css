@@ -293,6 +293,11 @@ nav .container {
   flex: 1 0 1rem;
 }
 
+.wave-border {
+  height: 150px;
+  overflow: hidden;
+}
+
 .scroll-in.js-opacity {
   opacity: 0;
 }
@@ -306,12 +311,16 @@ nav .container {
 }
 
 footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--shade-100);
+}
+
+footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 footer .social-media {
