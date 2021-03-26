@@ -12,24 +12,25 @@ mainNav.classList.add('js-nav');
 const getTheme = () => {
   const theme = localStorage.getItem('theme');
   theme && setActiveSelector(theme);
-  root.className = theme
+  root.className = theme;
+  const shade = getComputedStyle(document.documentElement).getPropertyValue('--shade-100');
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', shade);
 }
 
 const setTheme = (className) => {
   var root = document.getElementsByTagName('html')[0];
-  root.className = '';
-  root.classList.add(className);
-  setActiveSelector(className);
+  root.className = className;
+  localStorage.setItem('theme', className);
   const shade = getComputedStyle(document.documentElement).getPropertyValue('--shade-100');
   document.querySelector('meta[name="theme-color"]').setAttribute('content', shade);
-  localStorage.setItem('theme', className)
+  setActiveSelector(className);
 }
 
 const setActiveSelector = (className) => {
   var selectedTheme = document.getElementById(`${className}-select`);
   [...themeSelectors].forEach(item => {
     item.classList.remove('active')
-  })
+  });
   selectedTheme.classList.add('active');
   hideThemeContainer();
 }
