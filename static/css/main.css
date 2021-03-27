@@ -2,6 +2,7 @@
 @import "./utilities.css";
 @import "./animations.css";
 @import "../fontello/css/fontello.css";
+@import "./coffee.css";
 
 body {
   margin: 0;
@@ -327,6 +328,7 @@ footer .support p {
   margin: 0 0 0.5rem;
   max-width: 45ch;
   font-size: 0.9rem;
+  color: var(--grey-text);
 }
 
 footer .container {
