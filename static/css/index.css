@@ -169,6 +169,7 @@ section:last-of-type .container {
 .project-image img {
   display: block;
   width: 100%;
+  height: auto;
   object-fit: cover;
   object-position: top;
   opacity: 0.8;

@@ -30,6 +30,7 @@ section {
 .project-image img {
   display: block;
   width: 100%;
+  height: auto;
   opacity: 0.8;
   filter: brightness(45%) grayscale(1);
   transition: filter 1000ms;
