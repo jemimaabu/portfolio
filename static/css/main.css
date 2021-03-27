@@ -1,6 +1,7 @@
 @import "./theme.css";
 @import "./utilities.css";
 @import "./animations.css";
+@import "../fontello/css/fontello.css";
 
 body {
   margin: 0;
