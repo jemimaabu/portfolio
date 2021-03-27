@@ -37,7 +37,7 @@ section {
 }
 
 .td[data-attr="conference"] {
-  color: var(--shade-300);
+  color: var(--shade-500);
 }
 
 .table-header {
@@ -65,7 +65,7 @@ section {
 }
 
 .text-header {
-  color: var(--shade-300);
+  color: var(--shade-500);
   font-size: 1.1rem;
   font-weight: 400;
   margin: 0 0 0.625rem;
@@ -90,25 +90,6 @@ section {
 .text p[data-attr="location"]:before {
   content: "Location: ";
 }
-
-/* @media (min-width: 751px) {
-  .talks-table {
-    display: block;
-    border-bottom: 1px solid var(--grey-color);
-    max-height: 80vh;
-    overflow: scroll;
-  }
-
-  .table-header .th {
-    position: sticky;
-    top: 0;
-    background-color: var(--grey-color);
-  }
-
-  .tr:last-of-type .td {
-    border-bottom-color: transparent;
-  }
-} */
 
 @media (max-width: 750px) {
   .talks-table {
