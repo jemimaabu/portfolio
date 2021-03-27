@@ -317,6 +317,18 @@ footer {
   background-color: var(--shade-100);
 }
 
+footer .support.container {
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+footer .support p {
+  margin: 0 0 0.5rem;
+  max-width: 45ch;
+  font-size: 0.9rem;
+}
+
 footer .container {
   display: flex;
   justify-content: space-between;
@@ -386,6 +398,10 @@ footer .copyright {
   .js-nav .nav-links .social-media a {
     margin: 0 1rem;
     font-size: 1.1rem;
+  }
+
+  footer .support.container {
+    margin-bottom: 2rem;
   }
 }
 
