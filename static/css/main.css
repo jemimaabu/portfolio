@@ -328,7 +328,7 @@ footer .support p {
   margin: 0 0 0.5rem;
   max-width: 45ch;
   font-size: 0.9rem;
-  color: var(--grey-text);
+  color: var(--shade-500);
 }
 
 footer .container {
