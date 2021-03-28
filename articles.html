@@ -11,7 +11,7 @@
     skill.">
   <link rel="stylesheet" href="static/css/main.css" />
   <link rel="stylesheet" href="static/css/page.css" />
-  <link rel="stylesheet" href="static/css/talks.css" />
+  <link rel="stylesheet" href="static/css/articles.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
@@ -142,9 +142,78 @@
         I write articles on multiple platforms and online magazines, this is a list of everything I've written online.
       </p>
     </section>
-    <section id="articles" class="inner-container">
+    <section id="articles" class="container">
+      <input type="radio" id="all" name="tag" value="all" checked>
+      </input>
+      <input type="radio" id="portfolio" name="tag" value="portfolio">
+      </input>
+      <input type="radio" id="javascript" name="tag" value="javascript">
+      </input>
+      <input type="radio" id="conferences" name="tag" value="conferences">
+      </input>
+      <aside class="post-tags">
+        <div class="post-tag">
+          <label for="all" data-post="all">
+            All (3)
+          </label>
+        </div>
+        <div class="post-tag">
+          <label for="portfolio" data-post="portfolio">
+            Portfolio (1)
+          </label>
+        </div>
+        <div class="post-tag">
+          <label for="javascript" data-post="javascript">
+            JavaScript (1)
+          </label>
+        </div>
+        <div class="post-tag">
+          <label for="conferences" data-post="conferences">
+            Conferences (1)
+          </label>
+        </div>
+      </aside>
       <div class="main-content">
-
+        <div class="article" data-post="conferences">
+          <h3 class="article-title">
+            <a href="https://blog.jemimaabu.com/how-to-find-conferences-to-speak-at" target="_blank" rel="noopener">
+              How To Find Conferences To Speak At
+            </a>
+          </h3>
+          <div class="article-description">
+            <p>
+              Learn how to find conferences to give a talk at and how to get your first speaking
+              engagement.
+            </p>
+          </div>
+        </div>
+        <div class="article" data-post="portfolio">
+          <h3 class="article-title">
+            <a href="https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/"
+              target="_blank" rel="noopener">
+              5 Coding Projects You Should Include in Your Front End Portfolio
+            </a>
+          </h3>
+          <div class="article-description">
+            <p>
+              If you're wondering what sort of projects to include in your portfolio to appeal to prospective employers
+              or show off your front end skills, this article is for you.
+            </p>
+          </div>
+        </div>
+        <div class="article" data-post="javascript">
+          <h3 class="article-title">
+            <a href="https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671"
+              target="_blank" rel="noopener">
+              Handling Scroll Based Animation With Vanilla JavaScript
+            </a>
+          </h3>
+          <div class="article-description">
+            <p>
+              Here's how to implement animate-on-scroll events using vanilla JavaScript and CSS.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>

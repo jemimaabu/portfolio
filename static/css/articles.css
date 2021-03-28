@@ -1,0 +1,93 @@
+section#articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1 1 30%;
+  min-width: 250px;
+  margin: 1rem 3rem 1rem -0.5rem;
+}
+
+.main-content {
+  flex: 1 1 60%;
+  min-width: 400px;
+  margin-top: -1.5rem;
+}
+
+#articles input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.post-tag {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.post-tag label {
+  display: block;
+  text-align: center;
+  color: var(--grey-text);
+  border: 1px solid var(--grey-color);
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.post-tag label:hover,
+.post-tag label:focus,
+.post-tag label:focus-within {
+  background-color: var(--grey-color);
+}
+
+.article {
+  border-bottom: 1px dashed var(--shade-300);
+  display: none;
+  padding: 1.5rem 0;
+}
+
+.article-title {
+  color: var(--shade-500);
+}
+
+.article-title a {
+  color: var(--shade-500);
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+.article-description p {
+  font-size: 1.1rem;
+}
+
+input[value="all"]:checked ~ .post-tags label[data-post="all"],
+input[value="javascript"]:checked ~ .post-tags label[data-post="javascript"],
+input[value="portfolio"]:checked ~ .post-tags label[data-post="portfolio"],
+input[value="conferences"]:checked ~ .post-tags label[data-post="conferences"] {
+  background-color: var(--shade-100);
+  border-color: var(--shade-100);
+  opacity: 1;
+}
+
+input[value="all"]:checked ~ .main-content .article {
+  display: block;
+}
+
+input[value="javascript"]:checked
+  ~ .main-content
+  .article[data-post="javascript"],
+input[value="portfolio"]:checked
+  ~ .main-content
+  .article[data-post="portfolio"],
+input[value="conferences"]:checked
+  ~ .main-content
+  .article[data-post="conferences"] {
+  display: block;
+}
