@@ -91,3 +91,10 @@ input[value="conferences"]:checked
   .article[data-post="conferences"] {
   display: block;
 }
+
+@media screen and (max-width: 650px) {
+  aside,
+  .main-content {
+    min-width: auto;
+  }
+}
