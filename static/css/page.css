@@ -31,6 +31,7 @@ section p {
 .subsection-title {
   text-transform: uppercase;
   color: var(--shade-500);
+  font-size: 1.17em;
 }
 
 .page-nav {

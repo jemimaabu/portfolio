@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
+
 :root,
 :root.light {
   --background-color: #fafafa;
@@ -52,6 +54,117 @@
   --secondary-color: #e5b3b9;
   --grey-color: #c8d1c7;
   --grey-text: #536250;
+}
+
+:root.neon {
+  --background-color: #101b37;
+  --text-color: #fff;
+  --shade-100: #101b37;
+  --shade-300: #4b4bfb;
+  --shade-500: hsl(190, 99%, 47%);
+  --secondary-color: #e41376;
+  --grey-color: hsl(190, 20%, 30%);
+  --grey-text: #fff;
+  --neon-color: #e41376;
+}
+
+.neon-path {
+  display: none;
+}
+
+.neon body {
+  font-family: "Orbitron", sans-serif;
+}
+
+.neon body::before,
+.neon body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 10px;
+  z-index: 99;
+  background-color: var(--neon-color);
+  height: 100vh;
+  box-shadow: 0 0 15px 0 var(--neon-color);
+}
+
+@media screen and (max-width: 720px) {
+  .neon body::before,
+  .neon body::after {
+    width: 5px;
+  }
+}
+
+.neon body::before {
+  left: 0;
+}
+
+.neon body::after {
+  right: 0;
+}
+
+.neon h1,
+.neon .section-title {
+  text-shadow: 2px 1px var(--neon-color);
+}
+
+.neon .arrow {
+  color: var(--neon-color);
+}
+
+.neon .link-btn {
+  border-color: var(--neon-color);
+  color: var(--shade-500);
+}
+
+.neon .nav-links a {
+  text-shadow: 1px 1px var(--neon-color);
+}
+
+.neon ::marker {
+  color: var(--secondary-color);
+}
+
+.neon a {
+  text-decoration-color: var(--neon-color) !important;
+}
+
+.neon img {
+  box-shadow: 10px 10px 0 0 var(--neon-color);
+}
+
+.neon .neon-path {
+  display: block;
+}
+
+.neon .wave-border path:not(.neon-path) {
+  display: none;
+}
+
+.neon input[value="all"]:checked ~ .post-tags label[data-post="all"],
+.neon
+  input[value="javascript"]:checked
+  ~ .post-tags
+  label[data-post="javascript"],
+.neon
+  input[value="portfolio"]:checked
+  ~ .post-tags
+  label[data-post="portfolio"],
+.neon
+  input[value="conferences"]:checked
+  ~ .post-tags
+  label[data-post="conferences"] {
+  border-color: var(--neon-color);
+  color: var(--shade-500);
+}
+
+.neon .input-container.focused .form-input {
+  border-color: var(--neon-color);
+}
+
+.neon .focused label {
+  border: 1px solid var(--neon-color);
+  border-bottom-color: transparent;
 }
 
 #light-select .color.text {
@@ -132,6 +245,22 @@
 }
 #green-select .color.background {
   background-color: #f2f5f4;
+}
+
+#neon-select .color.text {
+  background-color: #fff;
+}
+#neon-select .color.shade-100 {
+  background-color: #101b37;
+}
+#neon-select .color.shade-300 {
+  background-color: #4b4bfb;
+}
+#neon-select .color.shade-500 {
+  background-color: #01c8ee;
+}
+#neon-select .color.background {
+  background-color: #e41376;
 }
 
 @media (prefers-color-scheme: dark) {

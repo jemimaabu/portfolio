@@ -99,7 +99,7 @@
           <div class="theme-label">
             Brown
           </div>
-          <div class="light theme">
+          <div class="theme">
             <div class="color background"></div>
             <div class="color shade-100"></div>
             <div class="color shade-300"></div>
@@ -111,7 +111,7 @@
           <div class="theme-label">
             Green
           </div>
-          <div class="light theme">
+          <div class="theme">
             <div class="color background"></div>
             <div class="color shade-100"></div>
             <div class="color shade-300"></div>
@@ -123,7 +123,19 @@
           <div class="theme-label">
             Pink
           </div>
-          <div class="light theme">
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="neon theme-select" id="neon-select" onclick="setTheme('neon')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Neon
+          </div>
+          <div class="theme">
             <div class="color background"></div>
             <div class="color shade-100"></div>
             <div class="color shade-300"></div>
@@ -686,6 +698,8 @@
     <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
       <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
         style="stroke: none; fill: var(--shade-100)"></path>
+      <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00"
+        style="stroke: var(--neon-color);fill: none;"></path>
     </svg>
   </div>
   <footer>
