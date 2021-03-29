@@ -12,7 +12,7 @@ aside {
 .main-content {
   flex: 1 1 60%;
   min-width: 400px;
-  margin-top: -1.5rem;
+  margin-top: -1rem;
 }
 
 #articles input {
@@ -55,6 +55,7 @@ aside {
 
 .article-title {
   color: var(--shade-500);
+  margin: 0.5rem 0;
 }
 
 .article-title a {
@@ -65,6 +66,12 @@ aside {
 
 .article-description p {
   font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.article-description p.details {
+  font-size: 1rem;
+  margin: 0;
 }
 
 input[value="all"]:checked ~ .post-tags label[data-post="all"],
