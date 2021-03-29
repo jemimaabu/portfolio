@@ -63,7 +63,7 @@
   --shade-300: #4b4bfb;
   --shade-500: hsl(190, 99%, 47%);
   --secondary-color: #e41376;
-  --grey-color: hsl(190, 20%, 30%);
+  --grey-color: hsl(190, 99%, 30%);
   --grey-text: #fff;
   --neon-color: #e41376;
 }
