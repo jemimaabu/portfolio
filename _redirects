@@ -1,7 +1,2 @@
-/index.html       /
-/about.html       /about
-/articles.html    /articles
-/presskit.html    /presskit
-/projects.html    /projects
-/talks.html       /talks
 /slides/*         /talks#slides
+/work/*           /projects
