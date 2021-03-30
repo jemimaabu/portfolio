@@ -3,23 +3,23 @@ header .animate-background:before {
 }
 
 header .animate-logo {
-  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s both;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 header .animate-text-1 {
-  animation: fade-in-bottom 0.5s ease-in-out 0.3s both;
+  animation: fade-in-bottom 0.5s ease-in-out both;
 }
 
 header .animate-text-2 {
-  animation: fade-in-bottom 0.5s ease-in-out 0.5s both;
+  animation: fade-in-bottom 0.5s ease-in-out both;
 }
 
 header .animate-subtitle {
-  animation: fade-in-bottom 0.5s ease-in-out 0.7s both;
+  animation: fade-in-bottom 0.5s ease-in-out both;
 }
 
 header .animate-scroll {
-  animation: fade-in-bottom 0.5s ease-in-out 0.9s both;
+  animation: fade-in-bottom 0.5s ease-in-out both;
 }
 
 @media (prefers-reduced-motion) {
