@@ -11,15 +11,15 @@ header .animate-text-1 {
 }
 
 header .animate-text-2 {
-  animation: fade-in-bottom 0.5s ease-in-out both;
+  animation: fade-in-bottom 0.5s ease-in-out 0.1s both;
 }
 
 header .animate-subtitle {
-  animation: fade-in-bottom 0.5s ease-in-out both;
+  animation: fade-in-bottom 0.5s ease-in-out 0.2s both;
 }
 
 header .animate-scroll {
-  animation: fade-in-bottom 0.5s ease-in-out both;
+  animation: fade-in-bottom 0.5s ease-in-out 0.3s both;
 }
 
 @media (prefers-reduced-motion) {
