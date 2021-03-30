@@ -474,6 +474,10 @@ footer {
     background-color: var(--background-color);
     padding: 2rem;
   }
+
+  .project-links a {
+    margin: 1rem auto;
+  }
 }
 
 @media (prefers-reduced-motion) {
