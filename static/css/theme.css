@@ -93,6 +93,10 @@
   .neon body::after {
     width: 5px;
   }
+
+  .neon .project-content-container {
+    border: 1px solid var(--shade-300);
+  }
 }
 
 .neon body::before {
@@ -129,7 +133,7 @@
   text-decoration-color: var(--neon-color) !important;
 }
 
-.neon img {
+.neon img:not(.img-404) {
   box-shadow: 10px 10px 0 0 var(--neon-color);
 }
 
@@ -165,6 +169,10 @@
 .neon .focused label {
   border: 1px solid var(--neon-color);
   border-bottom-color: transparent;
+}
+
+.neon .article-content {
+  border: 1px solid var(--shade-300);
 }
 
 #light-select .color.text {
