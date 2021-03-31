@@ -64,10 +64,11 @@ section {
   display: flex;
   flex-wrap: wrap;
   margin: 0.5rem 0;
+  padding: 0 1rem;
 }
 
 .project-tags li {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
