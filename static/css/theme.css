@@ -171,7 +171,8 @@
   border-bottom-color: transparent;
 }
 
-.neon .article-content {
+.neon .article-content,
+.neon .card-content {
   border: 1px solid var(--shade-300);
 }
 
