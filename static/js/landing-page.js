@@ -7,8 +7,6 @@ const scrollButton = document.querySelector(".scroll-button");
 const topOfMain = main.getBoundingClientRect().top;
 const scrollElements = document.querySelectorAll('.scroll-in');
 const projects = document.querySelectorAll('.project')
-const inputs = document.querySelectorAll(".form-input");
-const message = document.querySelector("#message")
 
 header.classList.add('js-fixed');
 scrollElements.forEach((el) => {
@@ -62,15 +60,6 @@ const handleScrollAnimation = () => {
   })
 }
 
-const handleMessageCount = () => {
-  var msg = document.getElementById("message").value;
-  var msgCount = document.getElementById("message-count")
-  var msgLength = msg.length;
-  const maxLength = 1000;
-  var charLeft = maxLength - msgLength;
-  msgCount.innerText = charLeft;
-}
-
 projects.forEach((el) => {
   el.addEventListener('click', () => {
     if (el.classList.contains('active')) {
@@ -80,24 +69,6 @@ projects.forEach((el) => {
     }
   })
 })
-
-inputs.forEach((input) => {
-  input.addEventListener("focus", (event) => {
-    const parent = event.target.parentElement;
-    parent.classList.add("focused");
-  });
-});
-
-inputs.forEach((input) => {
-  input.addEventListener("blur", (event) => {
-    const parent = event.target.parentElement;
-    if (!event.target.value) {
-      parent.classList.remove("focused");
-    }
-  });
-});
-
-message.addEventListener("input", handleMessageCount)
 
 var throttleTimer;
 
@@ -124,8 +95,3 @@ window.addEventListener("scroll", () => {
     throttle(handleScrollAnimation, 250)
   }
 });
-
-const contactMessage = document.querySelector('.success-message');
-if (window.location.search.includes('success')) {
-  contactMessage.innerHTML = "Thank you for your message, I'll get back to you as soon as I can &#128578;"
-}

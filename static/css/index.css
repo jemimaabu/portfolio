@@ -108,6 +108,10 @@ section .container {
   padding: 5rem 0;
 }
 
+section#articles {
+  padding-bottom: 5rem;
+}
+
 section:last-of-type .container {
   padding-bottom: 0;
 }
@@ -422,6 +426,10 @@ section:last-of-type .container {
 
 footer {
   padding-top: 0;
+}
+
+footer.index-footer {
+  background-color: var(--background-color);
 }
 
 @media screen and (max-width: 960px) {
