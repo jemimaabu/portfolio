@@ -44,13 +44,12 @@ section {
   background-color: var(--grey-color);
 }
 
-.main-text .text {
-  padding: 1rem 0;
-  border-bottom: 1px dashed var(--shade-300);
+.videos li {
+  margin-bottom: 10px;
 }
 
-.main-text .text:first-of-type {
-  padding-top: 0;
+.other li {
+  margin-bottom: 20px;
 }
 
 .flex-list {
@@ -59,7 +58,8 @@ section {
 }
 
 .flex-list li.text {
-  margin: 0.25rem 2rem 0.25rem 0;
+  margin: 0;
+  margin-right: 2rem;
   padding: 0;
   border: none;
 }
@@ -69,10 +69,13 @@ section {
   font-size: 1.1rem;
   font-weight: 400;
   margin: 0 0 0.625rem;
+  display: inline-block;
+  vertical-align: text-top;
 }
 
 .main-text p {
-  margin: 0.5rem 0;
+  margin: 0;
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   color: var(--text-color);
   line-height: normal;
@@ -100,7 +103,6 @@ section {
     display: list-item;
     margin-left: 2rem;
     padding: 1rem 0;
-    border-bottom: 1px dashed var(--grey-color);
   }
 
   .table-header + .tr {
