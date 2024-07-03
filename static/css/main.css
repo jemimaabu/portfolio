@@ -377,7 +377,7 @@ footer .copyright {
 }
 
 .copyright .heart {
-  color: var(--shade-300);
+  color: var(--shade-500);
 }
 
 @media screen and (min-width: 721px) {
