@@ -523,11 +523,12 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-to-main-content">Skip to main content</a>
   <header>
     <div class="fixed-header animate-background">
       <div class="container header-container">
         <div class="logo-container">
-          <span class="logo animate-logo">Jemima Abu</span>
+          <span class="logo animate-logo" role="heading" aria-level="1">Jemima Abu</span>
         </div>
         <div class="header-text">
           <h1>
@@ -537,9 +538,9 @@
         <h2 class="animate-subtitle">
           I build websites with a focus on responsive design and accessibility.
         </h2>
-        <div class="scroll-button animate-scroll" tabindex="0">
-          <div class="arrow">↓</div> scroll
-        </div>
+        <button class="scroll-button animate-scroll" tabindex="0">
+          <span class="arrow">↓</span> scroll
+        </button>
       </div>
     </div>
   </header>
@@ -555,26 +556,32 @@
         <a href="articles" class="link">articles</a>
         <div class="social-media">
           <a href="https://www.github.com/jemimaabu" title="Github">
-            <i class="demo-icon icon-github-circled"></i>
+                        <i class="demo-icon icon-github-circled" aria-hidden="true"></i>
+            <span class="visually-hidden">Github</span>
           </a>
           <a href="https://www.twitter.com/jemimaabu" title="Twitter">
-            <i class="demo-icon icon-twitter"></i>
+            <i class="demo-icon icon-twitter" aria-hidden="true"></i>
+            <span class="visually-hidden">Twitter</span>
           </a>
           <a href="https://jemimaabu.medium.com" title="Medium">
-            <i class="demo-icon icon-medium"></i>
+            <i class="demo-icon icon-medium" aria-hidden="true"></i>
+            <span class="visually-hidden">Medium</span>
           </a>
           <a href="https://codepen.io/jemimaabu" title="Codepen">
-            <i class="demo-icon icon-codeopen"></i>
+            <i class="demo-icon icon-codeopen" aria-hidden="true"></i>
+            <span class="visually-hidden">Codepen</span>
           </a>
           <a href="https://www.linkedin.com/in/jemimaabu" title="LinkedIn">
-            <i class="demo-icon icon-linkedin"></i>
+            <i class="demo-icon icon-linkedin" aria-hidden="true"></i>
+            <span class="visually-hidden">LinkedIn</span>
           </a>
         </div>
       </div>
       <div class="nav-controls">
         <button id="menu-display" title="Show Menu" class="hamburger"></button>
         <button id="theme-display" title="Select a color scheme" class="control">
-          <i class="demo-icon icon-cog"></i>
+          <i aria-hidden="true" class="demo-icon icon-cog"></i>
+          <span class="visually-hidden">Select a color scheme</span>
         </button>
       </div>
       <div class="theme-container">
@@ -654,13 +661,13 @@
       </div>
     </div>
   </nav>
-  <main>
+  <main id="main">
     <section id="about">
       <div class="container inner-container">
         <div class="intro scroll-in">
           <h2 class="section-title">Hello, I'm Jemima Abu <span class="title-icon">&#128578;</span></h2>
           <div class="section-subtitle">
-            <p> I'm a self-taught Front End Developer and Google Developer Expert in web technologies from Nigeria.</p>
+            <p role="heading" aria-level="3"> I'm a self-taught Front End Developer and Google Developer Expert in web technologies from Nigeria.</p>
             <p>
               I've been <a href="about#history">building websites since 2017</a> with a focus on responsive
               design,
@@ -672,12 +679,12 @@
               career development.
             </p>
             <p>I also <a href="articles">write articles</a> and I have my works published on <a
-                href="https://jemimaabu.medium.com/" target="_blank" rel="noopener">Medium</a>,
-              <a href="https://blog.jemimaabu.com" target="_blank" rel="noopener">Hashnode</a>, <a
-                href="https://www.freecodecamp.org/news/author/jemima/" target="_blank" rel="noopener">freeCodeCamp</a>,
-              <a href="https://css-tricks.com/author/jemima/" target="_blank" rel="noopener">CSSTricks</a>
+                href="https://jemimaabu.medium.com/" target="_blank" rel="noopener" aria-label="Medium (opens in a new tab)">Medium</a>,
+              <a href="https://blog.jemimaabu.com" target="_blank" rel="noopener" aria-label="Hashnode (opens in a new tab)">Hashnode</a>, <a
+                href="https://www.freecodecamp.org/news/author/jemima/" target="_blank" rel="noopener" aria-label="freeCodeCamp (opens in a new tab)">freeCodeCamp</a>,
+              <a href="https://css-tricks.com/author/jemima/" target="_blank" rel="noopener" aria-label="CSSTricks (opens in a new tab)">CSSTricks</a>
               and
-              <a href="https://tutsplus.com/authors/jemima-abu" target="_blank" rel="noopener">Envato Tuts</a> .
+              <a href="https://tutsplus.com/authors/jemima-abu" target="_blank" rel="noopener" aria-label="Envato Tuts (opens in a new tab)">Envato Tuts</a> .
             </p>
           </div>
           <div class="section-link">
@@ -687,7 +694,7 @@
       </div>
     </section>
     <div class="wave-border top">
-      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;" role="presentation">
         <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
           style="stroke: none; fill: var(--shade-100)"></path>
         <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
@@ -698,7 +705,7 @@
       <div class="container">
         <div class="title-container scroll-in">
           <h2 class="section-title">Featured Talks <span class="title-icon">&#127908;</span></h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" role="heading" aria-level="3">
             I like to speak at tech conferences on a variety of topics ranging from web accessibility to career
             development. Here are videos from my past talks:
           </p>
@@ -834,7 +841,7 @@
       </div>
     </section>
     <div class="wave-border bottom">
-      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;" role="presentation">
         <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
           style="stroke: none; fill: var(--shade-100);"></path>
         <path class="neon-path" d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98"
@@ -845,7 +852,7 @@
       <div class="container">
         <div class="title-container scroll-in">
           <h2 class="section-title">Featured Articles <span class="title-icon">&#128466;</span></h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" role="heading" aria-level="3">
             I write the type of articles I would want to read when trying to understand a new concept or develop a
             skill. Here are some things I've written recently:
           </p>
@@ -854,17 +861,17 @@
           <div class="article scroll-in">
             <div class="article-image">
               <a href="https://dev.to/jemimaabu/how-to-learn-javascript-4g9a"
-                target="_blank" rel="noopener">
+                target="_blank" rel="noopener" aria-label="How To Lean JavaScript article (opens in a new tab)">
                 <img src="./static/images/articles/learn-javascript.png"
                   alt="How To Learn JavaScript">
               </a>
             </div>
-            <div class="article-content">
+            <div class="article-content" aria-hidden>
               <div class="article-site">
                 <a href="https://dev.to/jemimaabu/how-to-learn-javascript-4g9a"
                   target="_blank" rel="noopener">DEV.TO</a>
               </div>
-              <h3 class="article-title">
+              <h3 class="article-title" aria-hidden>
                 <a href="https://dev.to/jemimaabu/how-to-learn-javascript-4g9a"
                   target="_blank" rel="noopener">
                   How To Learn JavaScript
@@ -881,17 +888,17 @@
           <div class="article scroll-in">
             <div class="article-image">
               <a href="https://www.freecodecamp.org/news/beginners-guide-to-creating-a-portfolio-website/"
-                target="_blank" rel="noopener">
+                target="_blank" rel="noopener" aria-label="A Beginner's Guide To Creating A Portfolio Website article (opens in a new tab)">
                 <img src="./static/images/articles/portfolio-guide.png"
                   alt="A Beginner's Guide To Creating A Portfolio Website">
               </a>
             </div>
             <div class="article-content">
-              <div class="article-site">
+              <div class="article-site" aria-hidden>
                 <a href="https://www.freecodecamp.org/news/beginners-guide-to-creating-a-portfolio-website/"
                   target="_blank" rel="noopener">freecodecamp</a>
               </div>
-              <h3 class="article-title">
+              <h3 class="article-title" aria-hidden>
                 <a href="https://www.freecodecamp.org/news/beginners-guide-to-creating-a-portfolio-website/"
                   target="_blank" rel="noopener">
                   I Helped 6 Developers Set Up Their Portfolio Website. Here's What I Learned.
@@ -908,17 +915,17 @@
           <div class="article scroll-in">
             <div class="article-image">
               <a href="https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671"
-                target="_blank" rel="noopener">
+                target="_blank" rel="noopener" aria-label="Handling Scroll Based Animation With Vanilla JavaScript article (opens in a new tab)">
                 <img src="./static/images/articles/js-scroll.png"
                   alt="Handling Scroll Based Animation With Vanilla JavaScript">
               </a>
             </div>
             <div class="article-content">
-              <div class="article-site">
+              <div class="article-site" aria-hidden>
                 <a href="https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671"
                   target="_blank" rel="noopener">envatotuts+</a>
               </div>
-              <h3 class="article-title">
+              <h3 class="article-title" aria-hidden>
                 <a href="https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671"
                   target="_blank" rel="noopener">
                   Handling Scroll Based Animation With Vanilla JavaScript
@@ -939,7 +946,7 @@
       </div>
     </section>
     <div class="wave-border top">
-      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;" role="presentation">
         <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
           style="stroke: none; fill: var(--shade-100)"></path>
         <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
@@ -947,7 +954,7 @@
       </svg>
     </div>
     <div class="wave-border bottom">
-      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;" role="presentation">
         <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
           style="stroke: none; fill: var(--shade-100);"></path>
         <path class="neon-path" d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98"
@@ -959,9 +966,9 @@
     <div class="support container">
       <p>Would you like to support my content?</p>
       <link href="https://fonts.googleapis.com/css?family=Cookie&amp;display=swap" rel="stylesheet">
-      <div class="bmc-btn-container"><a class="bmc-btn" target="_blank" rel="noopener"
-          href="http://buymeacoffee.com/jemimaabu"><svg viewBox="0 0 884 1279" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+      <div class="bmc-btn-container">
+        <a class="bmc-btn" target="_blank" rel="noopener" href="http://buymeacoffee.com/jemimaabu" aria-label="Buy Me A Coffee (opens in a new tab)">
+          <svg viewBox="0 0 884 1279" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518Z"
               fill="#0D0C22"></path>
             <path d="M803.896 388.891L802.916 389.166L803.896 388.891Z" fill="#0D0C22"></path>
@@ -1003,7 +1010,8 @@
     <div class="container">
       <div class="social-media">
         <a href="https://www.github.com/jemimaabu" title="Github">
-          <i class="demo-icon icon-github-circled"></i>
+                      <i class="demo-icon icon-github-circled" aria-hidden="true"></i>
+            <span class="visually-hidden">Github</span>
         </a>
         <a href="https://www.twitter.com/jemimaabu" title="Twitter">
           <i class="demo-icon icon-twitter"></i>

@@ -85,6 +85,7 @@ header .header-text {
   cursor: pointer;
   display: flex;
   transition: opacity 250ms;
+  font: inherit;
 }
 
 .fixed-header.scrolled .scroll-button {

@@ -49,6 +49,7 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-to-main-content">Skip to main content</a>
   <nav class="visible">
     <div class="container">
       <a href="/" class="nav-logo" title="Back to Homepage">
@@ -61,19 +62,24 @@
         <a href="articles" class="link">articles</a>
         <div class="social-media">
           <a href="https://www.github.com/jemimaabu" title="Github">
-            <i class="demo-icon icon-github-circled"></i>
+            <i class="demo-icon icon-github-circled" aria-hidden="true"></i>
+            <span class="visually-hidden">Github</span>
           </a>
           <a href="https://www.twitter.com/jemimaabu" title="Twitter">
-            <i class="demo-icon icon-twitter"></i>
+            <i class="demo-icon icon-twitter" aria-hidden="true"></i>
+            <span class="visually-hidden">Twitter</span>
           </a>
           <a href="https://jemimaabu.medium.com" title="Medium">
-            <i class="demo-icon icon-medium"></i>
+            <i class="demo-icon icon-medium" aria-hidden="true"></i>
+            <span class="visually-hidden">Medium</span>
           </a>
           <a href="https://codepen.io/jemimaabu" title="Codepen">
-            <i class="demo-icon icon-codeopen"></i>
+            <i class="demo-icon icon-codeopen" aria-hidden="true"></i>
+            <span class="visually-hidden">Codepen</span>
           </a>
           <a href="https://www.linkedin.com/in/jemimaabu" title="LinkedIn">
-            <i class="demo-icon icon-linkedin"></i>
+            <i class="demo-icon icon-linkedin" aria-hidden="true"></i>
+            <span class="visually-hidden">LinkedIn</span>
           </a>
         </div>
       </div>
@@ -81,8 +87,9 @@
         <button id="menu-display" title="Show Menu" class="hamburger">
 
         </button>
-        <button id="theme-display" class="control">
-          <i class="demo-icon icon-cog" title="Theme Select"></i>
+        <button id="theme-display" title="Select a color scheme" class="control">
+          <i aria-hidden="true" class="demo-icon icon-cog"></i>
+          <span class="visually-hidden">Select a color scheme</span>
         </button>
       </div>
       <div class="theme-container">
@@ -162,7 +169,7 @@
       </div>
     </div>
   </nav>
-  <main>
+  <main id="main">
     <section class="container">
       <h1>
         This Page Doesn't Exist &#128577;
@@ -171,7 +178,7 @@
         <a href="/" title="Take the blue pill">
           <img class="img-404" src="./static/images/404/Bluepill.png" alt="Blue Pill">
         </a>
-        <a href="http://www.cutecatgifs.com/" title="Take the red pill" target="_blank" rel="noopener">
+        <a href="http://www.cutecatgifs.com/" title="Take the red pill" target="_blank" rel="noopener" aria-label="Red Pill (opens in a new tab)">
           <img class="img-404" src="./static/images/404/redpill.png" alt="Red Pill">
         </a>
       </div>
@@ -181,7 +188,7 @@
     <a href="/">&#8592; Home</a>
   </div>
   <div class="wave-border top">
-    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;" role="presentation">
       <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
         style="stroke: none; fill: var(--shade-100)"></path>
       <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
@@ -192,8 +199,9 @@
     <div class="support container">
       <p>Would you like to support my content?</p>
       <link href="https://fonts.googleapis.com/css?family=Cookie&amp;display=swap" rel="stylesheet">
-      <div class="bmc-btn-container"><a class="bmc-btn" target="_blank" rel="noopener"
-          href="http://buymeacoffee.com/jemimaabu"><svg viewBox="0 0 884 1279" fill="none"
+      <div class="bmc-btn-container">
+        <a class="bmc-btn" target="_blank" rel="noopener" href="http://buymeacoffee.com/jemimaabu" aria-label="Buy me a coffee (opens in a new tab)">
+          <svg viewBox="0 0 884 1279" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518Z"
               fill="#0D0C22"></path>
@@ -236,7 +244,8 @@
     <div class="container">
       <div class="social-media">
         <a href="https://www.github.com/jemimaabu" title="Github">
-          <i class="demo-icon icon-github-circled"></i>
+                      <i class="demo-icon icon-github-circled" aria-hidden="true"></i>
+            <span class="visually-hidden">Github</span>
         </a>
         <a href="https://www.twitter.com/jemimaabu" title="Twitter">
           <i class="demo-icon icon-twitter"></i>
