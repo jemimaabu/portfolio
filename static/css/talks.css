@@ -4,7 +4,7 @@ html {
 }
 
 section {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .talks-table {
@@ -92,6 +92,22 @@ section {
 
 .text p[data-attr="location"]:before {
   content: "Location: ";
+}
+
+summary .subsection-subtitle,
+summary .subsection-title {
+  display: inline-block;
+  cursor: pointer;
+  margin-block: 8px;
+  margin-inline-start: 4px;
+}
+
+details:first-of-type .subsection-subtitle {
+  margin-top: 0;
+}
+
+summary + .talks-table {
+  margin-block: 8px;
 }
 
 @media (max-width: 750px) {
