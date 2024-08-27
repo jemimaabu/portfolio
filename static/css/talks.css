@@ -94,16 +94,20 @@ section {
   content: "Location: ";
 }
 
+details:first-of-type .subsection-subtitle {
+  margin-top: 0;
+}
+
+.details-count {
+  display: none;
+}
+
 summary .subsection-subtitle,
 summary .subsection-title {
   display: inline-block;
   cursor: pointer;
   margin-block: 8px;
   margin-inline-start: 4px;
-}
-
-details:first-of-type .subsection-subtitle {
-  margin-top: 0;
 }
 
 summary + .talks-table {
