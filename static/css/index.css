@@ -109,7 +109,8 @@ section .container {
   padding: 5rem 0;
 }
 
-section#articles {
+.articles-section,
+.awards-section {
   padding-bottom: 5rem;
 }
 
@@ -241,12 +242,6 @@ section:last-of-type .container {
   border-radius: 0;
 }
 
-.talks-container {
-  margin: 1.5rem -1.5rem -1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .talk-card {
   flex: 1 0 auto;
   margin: 1.5rem;
@@ -258,8 +253,7 @@ section:last-of-type .container {
   background-color: var(--grey-color);
 }
 
-.articles-container,
-.cards-container {
+.featured-container {
   display: flex;
   margin: 1.5rem -1.5rem -1.5rem;
   flex-wrap: wrap;
@@ -334,6 +328,11 @@ section:last-of-type .container {
 
 .article-site a:hover {
   color: var(--text-color);
+}
+
+.awards-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contact-content {
