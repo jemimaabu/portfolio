@@ -114,6 +114,19 @@ summary + .talks-table {
   margin-block: 8px;
 }
 
+.talk-tag {
+  color: var(--shade-500);
+}
+
+.video-link {
+  background: var(--shade-500);
+  color: var(--shade-100);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
 @media (max-width: 750px) {
   .talks-table {
     display: block;
@@ -139,6 +152,10 @@ summary + .talks-table {
     border: none;
     padding: 0 0 0.5rem;
   }
+  
+  .td:empty {
+    display: none;
+  }
 
   .td[data-attr="conference"] {
     padding-bottom: 0.625rem;
@@ -160,5 +177,13 @@ summary + .talks-table {
 
   .td[data-attr="location"]:before {
     content: "Location: ";
+  }
+
+  .video-link {
+    display: inline-block;
+  }
+
+  .video-link::after {
+    content: " Video";
   }
 }
