@@ -3,19 +3,25 @@ section#articles {
   flex-wrap: wrap;
 }
 
-aside {
+section#articles nav {
   flex: 1 1 30%;
   min-width: 250px;
   margin: 1rem 3rem 1rem -0.5rem;
 }
 
-.main-content {
+section#articles .main-content {
   flex: 1 1 60%;
   min-width: 400px;
   margin-top: -1rem;
 }
 
-#articles input {
+section#articles fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-tag input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -26,10 +32,6 @@ aside {
 .post-tag {
   display: inline-block;
   margin: 0.5rem 0.25rem;
-}
-
-.post-tag label {
-  display: block;
   text-align: center;
   color: var(--grey-text);
   border: 1px solid var(--grey-color);
@@ -41,9 +43,7 @@ aside {
   transition: all 500ms;
 }
 
-.post-tag label:hover,
-.post-tag label:focus,
-.post-tag label:focus-within {
+.post-tag:hover {
   background-color: var(--grey-color);
 }
 
@@ -74,34 +74,79 @@ aside {
   margin: 0;
 }
 
-input[value="all"]:checked ~ .post-tags label[data-post="all"],
-input[value="javascript"]:checked ~ .post-tags label[data-post="javascript"],
-input[value="portfolio"]:checked ~ .post-tags label[data-post="portfolio"],
-input[value="conferences"]:checked ~ .post-tags label[data-post="conferences"] {
+/* Active filter label */
+section#articles:has(#all:checked) label:has(#all),
+section#articles:has(#javascript:checked) label:has(#javascript),
+section#articles:has(#css:checked) label:has(#css),
+section#articles:has(#portfolio:checked) label:has(#portfolio),
+section#articles:has(#career:checked) label:has(#career),
+section#articles:has(#accessibility:checked) label:has(#accessibility),
+section#articles:has(#conferences:checked) label:has(#conferences) {
   background-color: var(--shade-100);
   border-color: var(--shade-100);
   opacity: 1;
 }
 
-input[value="all"]:checked ~ .main-content .article {
+/* Show all articles */
+section#articles:has(#all:checked) .article {
   display: block;
 }
 
-input[value="javascript"]:checked
-  ~ .main-content
-  .article[data-post="javascript"],
-input[value="portfolio"]:checked
-  ~ .main-content
-  .article[data-post="portfolio"],
-input[value="conferences"]:checked
-  ~ .main-content
-  .article[data-post="conferences"] {
+/* When a specific filter is active, hide all then show matching */
+section#articles:has(#javascript:checked) .article,
+section#articles:has(#css:checked) .article,
+section#articles:has(#portfolio:checked) .article,
+section#articles:has(#career:checked) .article,
+section#articles:has(#accessibility:checked) .article,
+section#articles:has(#conferences:checked) .article {
+  display: none;
+}
+
+section#articles:has(#javascript:checked) .article[data-post="javascript"],
+section#articles:has(#css:checked) .article[data-post="css"],
+section#articles:has(#portfolio:checked) .article[data-post="portfolio"],
+section#articles:has(#career:checked) .article[data-post="career"],
+section#articles:has(#accessibility:checked) .article[data-post="accessibility"],
+section#articles:has(#conferences:checked) .article[data-post="conferences"] {
   display: block;
+}
+
+/* Focus indicator */
+.post-tag:has(input:focus-visible) {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }
 
 @media screen and (max-width: 650px) {
-  aside,
-  .main-content {
+  section#articles nav,
+  section#articles .main-content {
     min-width: auto;
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  section#articles nav {
+    margin: 0;
+  }
+
+  section#articles fieldset {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+
+  section#articles fieldset::-webkit-scrollbar {
+    display: none;
+  }
+
+  .post-tag {
+    scroll-snap-align: start;
+    flex-shrink: 0;
   }
 }

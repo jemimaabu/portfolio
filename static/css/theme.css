@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
 
-:root,
-:root.light {
+:root {
   --background-color: #fafafa;
   --text-color: #000;
   --shade-100: #efefef;
@@ -12,7 +11,7 @@
   --grey-text: #595959;
 }
 
-:root.dark {
+:root:has(#theme-panel [value="dark"]:checked) {
   --background-color: #0d1926;
   --text-color: #f7fafc;
   --shade-100: #1a324c;
@@ -23,7 +22,7 @@
   --grey-text: #cfd8e2;
 }
 
-:root.brown {
+:root:has(#theme-panel [value="brown"]:checked) {
   --background-color: #eeeae2;
   --text-color: #120c07;
   --shade-100: #c7a991;
@@ -34,7 +33,7 @@
   --grey-text: #5e5955;
 }
 
-:root.pink {
+:root:has(#theme-panel [value="pink"]:checked) {
   --background-color: #fcf7f9;
   --text-color: #260d17;
   --shade-100: #ffcce1;
@@ -45,7 +44,7 @@
   --grey-text: #62505b;
 }
 
-:root.green {
+:root:has(#theme-panel [value="green"]:checked) {
   --background-color: #f2f5f4;
   --text-color: #1b3817;
   --shade-100: #bae5b3;
@@ -56,7 +55,7 @@
   --grey-text: #536250;
 }
 
-:root.neon {
+:root:has(#theme-panel [value="neon"]:checked) {
   --background-color: #101b37;
   --text-color: #fff;
   --shade-100: #101b37;
@@ -72,12 +71,12 @@
   display: none;
 }
 
-.neon body {
+:root:has(#theme-panel [value="neon"]:checked) body {
   font-family: "Orbitron", sans-serif;
 }
 
-.neon body::before,
-.neon body::after {
+:root:has(#theme-panel [value="neon"]:checked) body::before,
+:root:has(#theme-panel [value="neon"]:checked) body::after {
   content: "";
   position: fixed;
   top: 0;
@@ -89,188 +88,111 @@
 }
 
 @media screen and (max-width: 720px) {
-  .neon body::before,
-  .neon body::after {
+  :root:has(#theme-panel [value="neon"]:checked) body::before,
+  :root:has(#theme-panel [value="neon"]:checked) body::after {
     width: 5px;
   }
 
-  .neon .project-content-container {
+  :root:has(#theme-panel [value="neon"]:checked) .project-content-container {
     border: 1px solid var(--shade-300);
   }
 }
 
-.neon body::before {
+:root:has(#theme-panel [value="neon"]:checked) body::before {
   left: 0;
 }
 
-.neon body::after {
+:root:has(#theme-panel [value="neon"]:checked) body::after {
   right: 0;
 }
 
-.neon h1,
-.neon .section-title {
+:root:has(#theme-panel [value="neon"]:checked) h1,
+:root:has(#theme-panel [value="neon"]:checked) .section-title {
   text-shadow: 2px 1px var(--neon-color);
 }
 
-.neon .arrow {
+:root:has(#theme-panel [value="neon"]:checked) .arrow {
   color: var(--neon-color);
 }
 
-.neon .link-btn {
+:root:has(#theme-panel [value="neon"]:checked) .link-btn {
   border-color: var(--neon-color);
   color: var(--shade-500);
 }
 
-.neon .nav-links a {
+:root:has(#theme-panel [value="neon"]:checked) .nav-links a {
   text-shadow: 1px 1px var(--neon-color);
 }
 
-.neon ::marker {
+:root:has(#theme-panel [value="neon"]:checked) ::marker {
   color: var(--secondary-color);
 }
 
-.neon a {
+:root:has(#theme-panel [value="neon"]:checked) a {
   text-decoration-color: var(--neon-color) !important;
 }
 
-.neon img:not(.img-404) {
+:root:has(#theme-panel [value="neon"]:checked) img:not(.img-404) {
   box-shadow: 10px 10px 0 0 var(--neon-color);
 }
 
-.neon .neon-path {
+:root:has(#theme-panel [value="neon"]:checked) .neon-path {
   display: block;
 }
 
-.neon .wave-border path:not(.neon-path) {
+:root:has(#theme-panel [value="neon"]:checked) .wave-border path:not(.neon-path) {
   display: none;
 }
 
-.neon input[value="all"]:checked ~ .post-tags label[data-post="all"],
-.neon
-  input[value="javascript"]:checked
-  ~ .post-tags
-  label[data-post="javascript"],
-.neon
-  input[value="portfolio"]:checked
-  ~ .post-tags
-  label[data-post="portfolio"],
-.neon
-  input[value="conferences"]:checked
-  ~ .post-tags
-  label[data-post="conferences"] {
-  border-color: var(--neon-color);
-  color: var(--shade-500);
-}
-
-.neon .input-container.focused .form-input {
+:root:has(#theme-panel [value="neon"]:checked) .input-container.focused .form-input {
   border-color: var(--neon-color);
 }
 
-.neon .focused label {
+:root:has(#theme-panel [value="neon"]:checked) .focused label {
   border: 1px solid var(--neon-color);
   border-bottom-color: transparent;
 }
 
-.neon .article-content,
-.neon .card-content {
+:root:has(#theme-panel [value="neon"]:checked) .article-content,
+:root:has(#theme-panel [value="neon"]:checked) .card-content {
   border: 1px solid var(--shade-300);
 }
 
-#light-select .color.text {
-  background-color: #000;
-}
-#light-select .color.shade-100 {
-  background-color: #efefef;
-}
-#light-select .color.shade-300 {
-  background-color: #8a8a8a;
-}
-#light-select .color.shade-500 {
-  background-color: #3d3d3d;
-}
-#light-select .color.background {
-  background-color: #fff;
-}
+#light-select .color.text { background-color: #000; }
+#light-select .color.shade-100 { background-color: #efefef; }
+#light-select .color.shade-300 { background-color: #8a8a8a; }
+#light-select .color.shade-500 { background-color: #3d3d3d; }
+#light-select .color.background { background-color: #fff; }
 
-#dark-select .color.text {
-  background-color: #f7fafc;
-}
-#dark-select .color.shade-100 {
-  background-color: #1a324c;
-}
-#dark-select .color.shade-300 {
-  background-color: #4383cb;
-}
-#dark-select .color.shade-500 {
-  background-color: #8cb0d9;
-}
-#dark-select .color.background {
-  background-color: #0d1926;
-}
+#dark-select .color.text { background-color: #f7fafc; }
+#dark-select .color.shade-100 { background-color: #1a324c; }
+#dark-select .color.shade-300 { background-color: #4383cb; }
+#dark-select .color.shade-500 { background-color: #8cb0d9; }
+#dark-select .color.background { background-color: #0d1926; }
 
-#brown-select .color.text {
-  background-color: #120c07;
-}
-#brown-select .color.shade-100 {
-  background-color: #c7a991;
-}
-#brown-select .color.shade-300 {
-  background-color: #6f482a;
-}
-#brown-select .color.shade-500 {
-  background-color: #4a301c;
-}
-#brown-select .color.background {
-  background-color: #eeeae2;
-}
+#brown-select .color.text { background-color: #120c07; }
+#brown-select .color.shade-100 { background-color: #c7a991; }
+#brown-select .color.shade-300 { background-color: #6f482a; }
+#brown-select .color.shade-500 { background-color: #4a301c; }
+#brown-select .color.background { background-color: #eeeae2; }
 
-#pink-select .color.text {
-  background-color: #260d17;
-}
-#pink-select .color.shade-100 {
-  background-color: #ffcce1;
-}
-#pink-select .color.shade-300 {
-  background-color: #bf4075;
-}
-#pink-select .color.shade-500 {
-  background-color: #732646;
-}
-#pink-select .color.background {
-  background-color: #fcf7f9;
-}
+#pink-select .color.text { background-color: #260d17; }
+#pink-select .color.shade-100 { background-color: #ffcce1; }
+#pink-select .color.shade-300 { background-color: #bf4075; }
+#pink-select .color.shade-500 { background-color: #732646; }
+#pink-select .color.background { background-color: #fcf7f9; }
 
-#green-select .color.text {
-  background-color: #1b3817;
-}
-#green-select .color.shade-100 {
-  background-color: #bae5b3;
-}
-#green-select .color.shade-300 {
-  background-color: #024541;
-}
-#green-select .color.shade-500 {
-  background-color: #012d32;
-}
-#green-select .color.background {
-  background-color: #f2f5f4;
-}
+#green-select .color.text { background-color: #1b3817; }
+#green-select .color.shade-100 { background-color: #bae5b3; }
+#green-select .color.shade-300 { background-color: #024541; }
+#green-select .color.shade-500 { background-color: #012d32; }
+#green-select .color.background { background-color: #f2f5f4; }
 
-#neon-select .color.text {
-  background-color: #fff;
-}
-#neon-select .color.shade-100 {
-  background-color: #101b37;
-}
-#neon-select .color.shade-300 {
-  background-color: #4b4bfb;
-}
-#neon-select .color.shade-500 {
-  background-color: #01c8ee;
-}
-#neon-select .color.background {
-  background-color: #e41376;
-}
+#neon-select .color.text { background-color: #fff; }
+#neon-select .color.shade-100 { background-color: #101b37; }
+#neon-select .color.shade-300 { background-color: #4b4bfb; }
+#neon-select .color.shade-500 { background-color: #01c8ee; }
+#neon-select .color.background { background-color: #e41376; }
 
 @media (prefers-color-scheme: dark) {
   :root {
