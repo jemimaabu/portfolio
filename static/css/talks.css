@@ -1,10 +1,21 @@
-body,
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 section {
   margin: 2rem 0;
+}
+
+.subsection-title {
+  margin-block: 1em;
+}
+
+.subsection-subtitle {
+  font-size: 1em;
+  margin-block: 1.33em;
 }
 
 .talks-table {
@@ -20,6 +31,7 @@ section {
 .td,
 .th {
   display: table-cell;
+  text-align: left;
   padding: 0.625rem;
   border: 1px solid var(--grey-color);
   width: 25%;
@@ -31,8 +43,7 @@ section {
   font-weight: bold;
 }
 
-.td h4 {
-  margin: 0;
+.th.td {
   font-weight: 400;
 }
 
@@ -119,6 +130,8 @@ summary + .talks-table {
 }
 
 .video-link {
+  position: relative;
+  white-space: nowrap;
   background: var(--shade-500);
   color: var(--shade-100);
   padding: 0.25rem 0.5rem;
@@ -127,8 +140,21 @@ summary + .talks-table {
   font-size: 0.95rem;
 }
 
+.video-link .visually-hidden {
+  display: inline;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 @media (max-width: 750px) {
-  .talks-table {
+  .talks-table,
+  .talks-table thead,
+  .talks-table tbody {
     display: block;
   }
 

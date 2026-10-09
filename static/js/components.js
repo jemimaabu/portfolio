@@ -46,7 +46,7 @@ class MobileMenu extends HTMLElement {
       const attrs = external
         ? `aria-label="${ariaLabel}" target="_blank" rel="noopener"`
         : '';
-      return `<a href="${href}" class="link${isActive ? ' active' : ''}" ${attrs}>${label}</a>`;
+      return `<a href="${href}" class="link${isActive ? ' active' : ''}"${isActive ? ' aria-current="page"' : ''} ${attrs}>${label}</a>`;
     }).join('\n      ');
 
     const div = document.createElement('div');
